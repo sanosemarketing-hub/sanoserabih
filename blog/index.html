@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — Sanose Rabih | AI Marketing</title>
+<meta name="description" content="Weekly insights on digital marketing, AI in business, and social media strategy for small business owners. Published every Saturday."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cairo:wght@300;400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:rgba(201,168,76,0.13);
+  --dark:#0B0B09;--card:#131310;--card2:#181814;
+  --t1:#F0EAE0;--t2:#B8A880;--t3:#7A6A4A;--t4:#4A3A1A;
+  --border:rgba(201,168,76,0.16);--border2:rgba(201,168,76,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--t1);font-family:'Source Sans 3',sans-serif;font-weight:300;line-height:1.7;min-height:100vh}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(11,11,9,0.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 40px;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{color:var(--gold);font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:600;text-decoration:none}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--t3);font-size:13px;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(170deg,#12120A 0%,#0D0D08 60%,#0B0B09 100%);
+  border-bottom:1px solid var(--border);
+  padding:80px 40px 64px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);
+  width:800px;height:400px;
+  background:radial-gradient(ellipse,rgba(201,168,76,0.055) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  font-weight:600;margin-bottom:20px;
+}
+.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,5vw,54px);font-weight:700;
+  line-height:1.15;color:var(--t1);margin-bottom:16px;letter-spacing:-0.5px;
+}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:17px;color:var(--t2);max-width:580px;margin-bottom:36px}
+
+/* Progress bar */
+.progress-block{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.progress-track{
+  width:240px;height:4px;background:rgba(201,168,76,0.12);
+  border-radius:2px;position:relative;overflow:hidden;
+}
+.progress-fill{
+  height:100%;width:1.92%; /* 1/52 */
+  background:linear-gradient(to right,#8B6914,#C9A84C);
+  border-radius:2px;
+  animation:fillUp .8s ease forwards;
+}
+@keyframes fillUp{from{width:0}to{width:1.92%}}
+.progress-label{font-size:13px;color:var(--t3)}
+.progress-label strong{color:var(--gold)}
+
+/* Pillar pills */
+.pillars-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.pillar-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:20px;font-size:12px;
+  border:1px solid;cursor:pointer;transition:all .18s;user-select:none;
+}
+.pillar-pill.dm{color:#C9A84C;border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.06)}
+.pillar-pill.ai{color:#7EB8D4;border-color:rgba(126,184,212,.3);background:rgba(126,184,212,.06)}
+.pillar-pill.sm{color:#C47EC4;border-color:rgba(196,126,196,.3);background:rgba(196,126,196,.06)}
+.pillar-pill.gr{color:#7EC47E;border-color:rgba(126,196,126,.3);background:rgba(126,196,126,.06)}
+.pillar-pill.active-dm{background:rgba(201,168,76,.18);border-color:rgba(201,168,76,.5)}
+.pillar-pill.active-ai{background:rgba(126,184,212,.18);border-color:rgba(126,184,212,.5)}
+.pillar-pill.active-sm{background:rgba(196,126,196,.18);border-color:rgba(196,126,196,.5)}
+.pillar-pill.active-gr{background:rgba(126,196,126,.18);border-color:rgba(126,196,126,.5)}
+.pillar-pill.all-active{background:var(--gold-dim);border-color:rgba(201,168,76,.4);color:var(--gold)}
+
+/* ── LANG TOGGLE ── */
+.lang-toggle{
+  display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-right:16px;
+}
+.lang-btn{
+  padding:6px 16px;border:none;background:transparent;
+  color:var(--t3);font-size:13px;cursor:pointer;transition:all .18s;font-family:'Source Sans 3',sans-serif;
+}
+.lang-btn.active{background:var(--gold);color:#0B0B09;font-weight:600}
+
+/* ── FEATURED ARTICLE ── */
+.section{max-width:1100px;margin:0 auto;padding:60px 40px}
+.section-label{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:24px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.featured{
+  display:grid;grid-template-columns:1fr 420px;gap:40px;
+  background:var(--card);border:1px solid rgba(201,168,76,.22);
+  border-radius:16px;overflow:hidden;position:relative;
+  transition:border-color .2s;
+}
+.featured:hover{border-color:rgba(201,168,76,.4)}
+.featured::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+}
+.feat-body{padding:44px 40px}
+.feat-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.feat-week{
+  background:linear-gradient(135deg,#C9A84C,#8B6914);
+  color:#0B0B09;font-size:11px;font-weight:700;
+  padding:4px 12px;border-radius:12px;letter-spacing:1px;
+}
+.feat-tag{
+  background:var(--gold-dim);border:1px solid rgba(201,168,76,.3);
+  color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  padding:3px 10px;border-radius:12px;font-weight:600;
+}
+.feat-date{color:var(--t3);font-size:12px}
+.feat-body h2{
+  font-family:'Playfair Display',serif;font-size:clamp(20px,2.8vw,30px);
+  font-weight:700;line-height:1.25;color:var(--t1);margin-bottom:14px;
+}
+.feat-body p{color:var(--t2);font-size:15px;margin-bottom:28px;line-height:1.7}
+.feat-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-en{
+  display:inline-flex;align-items:center;gap:6px;
+  background:linear-gradient(135deg,#C9A84C,#8B6914);
+  color:#0B0B09;font-weight:700;font-size:13px;
+  padding:11px 22px;border-radius:7px;text-decoration:none;
+  transition:opacity .2s;letter-spacing:.5px;
+}
+.btn-en:hover{opacity:.85}
+.btn-ar{
+  display:inline-flex;align-items:center;gap:6px;
+  background:transparent;border:1px solid rgba(201,168,76,.35);
+  color:var(--gold);font-size:13px;
+  padding:11px 22px;border-radius:7px;text-decoration:none;
+  transition:all .2s;
+}
+.btn-ar:hover{background:var(--gold-dim);border-color:rgba(201,168,76,.5)}
+.feat-visual{
+  background:linear-gradient(135deg,#1A1800,#111106);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:12px;padding:40px 32px;
+  border-right:1px solid var(--border2);
+}
+.feat-big-num{
+  font-family:'Playfair Display',serif;
+  font-size:90px;font-weight:700;
+  color:rgba(201,168,76,0.12);line-height:1;
+  position:relative;
+}
+.feat-big-num::after{
+  content:'01';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:72px;color:var(--gold);opacity:.25;
+}
+.feat-stats{display:flex;flex-direction:column;gap:12px;width:100%}
+.feat-stat{
+  background:rgba(201,168,76,0.06);border:1px solid var(--border2);
+  border-radius:8px;padding:10px 14px;text-align:center;
+}
+.feat-stat-n{font-size:22px;font-weight:700;color:var(--gold);font-family:'Playfair Display',serif}
+.feat-stat-l{font-size:11px;color:var(--t3);margin-top:2px}
+
+/* ── ARTICLES GRID ── */
+.articles-controls{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;margin-bottom:28px;
+}
+.article-count{font-size:13px;color:var(--t3)}
+.article-count strong{color:var(--t2)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+
+.card{
+  background:var(--card);border:1px solid var(--border2);
+  border-radius:12px;padding:24px;
+  transition:all .18s;cursor:default;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.card:hover{border-color:rgba(201,168,76,.25);background:var(--card2);transform:translateY(-2px)}
+.card-week-badge{
+  position:absolute;top:16px;right:16px;
+  width:30px;height:30px;border-radius:50%;
+  background:rgba(255,255,255,0.04);border:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;color:var(--t4);font-family:'Source Sans 3',sans-serif;font-weight:600;
+}
+.card-pillar{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  font-weight:600;padding:3px 10px;border-radius:10px;border:1px solid;
+  margin-bottom:12px;width:fit-content;
+}
+.p-dm{color:#C9A84C;border-color:rgba(201,168,76,.25);background:rgba(201,168,76,.07)}
+.p-ai{color:#7EB8D4;border-color:rgba(126,184,212,.25);background:rgba(126,184,212,.07)}
+.p-sm{color:#C47EC4;border-color:rgba(196,126,196,.25);background:rgba(196,126,196,.07)}
+.p-gr{color:#7EC47E;border-color:rgba(126,196,126,.25);background:rgba(126,196,126,.07)}
+
+.card-title{
+  font-family:'Playfair Display',serif;font-size:16px;
+  font-weight:600;color:var(--t1);line-height:1.35;
+  margin-bottom:10px;flex:1;padding-right:36px;
+}
+.card-title.ar{direction:rtl;font-family:'Cairo',sans-serif;font-weight:700;padding-right:0;padding-left:36px}
+.card-date{font-size:12px;color:var(--t3);margin-top:auto;padding-top:14px;border-top:1px solid var(--border2)}
+
+/* hidden */
+.card.hidden{display:none}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid var(--border);
+  padding:32px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;max-width:1100px;margin:0 auto;
+}
+.footer-brand{color:var(--t3);font-size:12px}
+.footer-note{color:var(--t4);font-size:12px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .featured{grid-template-columns:1fr}
+  .feat-visual{display:none}
+}
+@media(max-width:600px){
+  nav{padding:0 16px}.hero{padding:60px 16px 48px}.section{padding:40px 16px}
+  .nav-links{display:none}
+  .grid{grid-template-columns:1fr}
+  footer{padding:24px 16px}
+}
+
+/* entrance animation */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner,.featured,.card{animation:fadeUp .5s ease both}
+.card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.1s}
+.card:nth-child(3){animation-delay:.15s}.card:nth-child(4){animation-delay:.2s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">Sanose Rabih</a>
+  <ul class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html" class="active">Blog</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#contact">Contact</a>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Weekly Blog</div>
+    <h1>Digital Marketing &amp;<br><em>AI Insights</em></h1>
+    <p class="hero-sub">Data-backed articles for small business owners published every Saturday — from digital marketing fundamentals to AI-powered growth strategies.</p>
+
+    <div class="progress-block">
+      <div>
+        <div style="font-size:11px;color:var(--t3);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase">Year Progress</div>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+      </div>
+      <div class="progress-label"><strong>2</strong> of <strong>52</strong> articles published</div>
+    </div>
+
+    <!-- Controls row -->
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:28px">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en',this)">English</button>
+        <button class="lang-btn" onclick="setLang('ar',this)">العربية</button>
+      </div>
+      <div class="pillars-row" style="margin-top:0">
+        <span class="pillar-pill dm all-active" onclick="filterPillar('all',this)">✦ All</span>
+        <span class="pillar-pill dm" onclick="filterPillar('dm',this)">📊 Digital Marketing</span>
+        <span class="pillar-pill ai" onclick="filterPillar('ai',this)">🤖 AI in Business</span>
+        <span class="pillar-pill sm" onclick="filterPillar('sm',this)">📱 Social Media</span>
+        <span class="pillar-pill gr" onclick="filterPillar('gr',this)">🚀 Growth & Strategy</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURED -->
+<section class="section" style="padding-bottom:0">
+  <div class="section-label">Latest Article — Week 1</div>
+  <article class="featured" data-pillar="dm">
+    <div class="feat-body">
+      <div class="feat-meta">
+        <span class="feat-week">Week 01</span>
+        <span class="feat-tag">Digital Marketing</span>
+        <span class="feat-date">Saturday, June 6, 2026</span>
+      </div>
+      <h2 id="feat-title">Why Every Small Business Needs Digital Marketing in 2026</h2>
+      <p id="feat-desc">The internet is where your customers live, research, compare, and buy. In 2026, the question is not whether your small business should be online — but how well you show up when it matters.</p>
+      <div class="feat-ctas">
+        <a href="en/why-small-business-digital-marketing-2026.html" class="btn-en">Read in English →</a>
+        <a href="ar/al-tasweek-al-raqami-2026.html" class="btn-ar">اقرأ بالعربية ←</a>
+      </div>
+    </div>
+    <div class="feat-visual">
+      <div class="feat-big-num" aria-hidden="true">01</div>
+      <div class="feat-stats">
+        <div class="feat-stat">
+          <div class="feat-stat-n">67.9%</div>
+          <div class="feat-stat-l">of world population online</div>
+        </div>
+        <div class="feat-stat">
+          <div class="feat-stat-n">$5</div>
+          <div class="feat-stat-l">return per $1 in digital marketing</div>
+        </div>
+        <div class="feat-stat">
+          <div class="feat-stat-n">96%</div>
+          <div class="feat-stat-l">research online before buying</div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- UPCOMING GRID -->
+<section class="section">
+  <div class="articles-controls">
+    <div class="section-label" style="flex:1;margin-bottom:0">Upcoming Articles</div>
+    <div class="article-count" id="countLabel"><strong>50</strong> scheduled</div>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <!-- Week 2 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">02</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">How Great Content Attracts Customers Without Paid Ads</div>
+      <div class="card-title ar-title ar" style="display:none">كيف يجذب المحتوى الجيد العملاء بدون إعلانات مدفوعة؟</div>
+      <div class="card-links">
+        <a href="en/how-content-attracts-customers-without-paid-ads.html" class="btn-en">Read in English →</a>
+        <a href="ar/al-muhtawa-yajlib-albaa-bila-ijlaanat.html" class="btn-ar">اقرأ بالعربية ←</a>
+      </div>
+      <div class="card-date">Jun 13, 2026</div>
+    </article>
+
+    <!-- Week 3 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">03</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">7 Social Media Mistakes That Are Quietly Hurting Your Business</div>
+      <div class="card-title ar-title ar" style="display:none">7 أخطاء على السوشال ميديا تضر بعملك بصمت</div>
+      <div class="card-date">Jun 20, 2026</div>
+    </article>
+
+    <!-- Week 4 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">04</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">How to Build Customer Trust Online — A Small Business Guide</div>
+      <div class="card-title ar-title ar" style="display:none">كيف تبني ثقة العملاء على الإنترنت؟</div>
+      <div class="card-date">Jun 27, 2026</div>
+    </article>
+
+    <!-- Week 5 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">05</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Traditional vs. Digital Marketing: What Actually Works in 2026</div>
+      <div class="card-title ar-title ar" style="display:none">التسويق التقليدي مقابل الرقمي: ما يعمل فعلاً في 2026؟</div>
+      <div class="card-date">Jul 4, 2026</div>
+    </article>
+
+    <!-- Week 6 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">06</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Can Paid Ads Alone Grow Your Business? The Real Answer</div>
+      <div class="card-title ar-title ar" style="display:none">هل الإعلانات الممولة وحدها كافية لتنمية مشروعك؟</div>
+      <div class="card-date">Jul 11, 2026</div>
+    </article>
+
+    <!-- Week 7 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">07</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">How to Turn Social Media Followers Into Loyal Paying Customers</div>
+      <div class="card-title ar-title ar" style="display:none">كيف تحول متابعيك إلى عملاء حقيقيين؟</div>
+      <div class="card-date">Jul 18, 2026</div>
+    </article>
+
+    <!-- Week 8 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">08</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Content Strategy That Increases Engagement on a Small Budget</div>
+      <div class="card-title ar-title ar" style="display:none">استراتيجية محتوى تزيد التفاعل بميزانية صغيرة</div>
+      <div class="card-date">Jul 25, 2026</div>
+    </article>
+
+    <!-- Week 9 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">09</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Why Some Business Pages Fail Despite Posting Every Day</div>
+      <div class="card-title ar-title ar" style="display:none">لماذا تفشل بعض الصفحات رغم النشر اليومي؟</div>
+      <div class="card-date">Aug 1, 2026</div>
+    </article>
+
+    <!-- Week 10 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">10</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">How to Build a Strong Online Brand Identity for Your Small Business</div>
+      <div class="card-title ar-title ar" style="display:none">كيف تبني هوية رقمية قوية لمشروعك؟</div>
+      <div class="card-date">Aug 8, 2026</div>
+    </article>
+
+    <!-- Week 11 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">11</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Email Marketing: The Underrated Growth Engine for Small Businesses</div>
+      <div class="card-title ar-title ar" style="display:none">التسويق بالبريد الإلكتروني: المحرك المُهمَل لنمو المشاريع</div>
+      <div class="card-date">Aug 15, 2026</div>
+    </article>
+
+    <!-- Week 12 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">12</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Local SEO: How to Get Found by Customers in Your Area</div>
+      <div class="card-title ar-title ar" style="display:none">السيو المحلي: كيف يجدك العملاء في منطقتك؟</div>
+      <div class="card-date">Aug 22, 2026</div>
+    </article>
+
+    <!-- Week 13 -->
+    <article class="card" data-pillar="dm">
+      <div class="card-week-badge">13</div>
+      <div class="card-pillar p-dm">📊 Digital Marketing</div>
+      <div class="card-title en-title">Google My Business: Your Free Marketing Weapon (Complete Guide)</div>
+      <div class="card-title ar-title ar" style="display:none">Google My Business: سلاحك التسويقي المجاني</div>
+      <div class="card-date">Aug 29, 2026</div>
+    </article>
+
+    <!-- Week 14 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">14</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">How AI Is Helping Small Businesses Compete With Big Brands</div>
+      <div class="card-title ar-title ar" style="display:none">كيف يساعد الذكاء الاصطناعي المشاريع الصغيرة على منافسة الكبار؟</div>
+      <div class="card-date">Sep 5, 2026</div>
+    </article>
+
+    <!-- Week 15 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">15</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">The Future of AI in Digital Marketing: What's Coming Next</div>
+      <div class="card-title ar-title ar" style="display:none">مستقبل الذكاء الاصطناعي في التسويق الرقمي</div>
+      <div class="card-date">Sep 12, 2026</div>
+    </article>
+
+    <!-- Week 16 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">16</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">Best AI Tools for Content Creation in 2026</div>
+      <div class="card-title ar-title ar" style="display:none">أفضل أدوات الذكاء الاصطناعي لصناعة المحتوى في 2026</div>
+      <div class="card-date">Sep 19, 2026</div>
+    </article>
+
+    <!-- Week 17 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">17</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">Will AI Replace Digital Marketers? The Honest Answer</div>
+      <div class="card-title ar-title ar" style="display:none">هل سيستبدل الذكاء الاصطناعي المسوقين؟ الإجابة الصادقة</div>
+      <div class="card-date">Sep 26, 2026</div>
+    </article>
+
+    <!-- Week 18 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">18</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">How to Use ChatGPT to Grow Your Business — Practical Guide</div>
+      <div class="card-title ar-title ar" style="display:none">كيف تستخدم ChatGPT لتنمية مشروعك؟ دليل عملي</div>
+      <div class="card-date">Oct 3, 2026</div>
+    </article>
+
+    <!-- Week 19 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">19</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">5 Ways AI Saves Small Business Owners Time and Money</div>
+      <div class="card-title ar-title ar" style="display:none">5 طرق يوفر بها الذكاء الاصطناعي الوقت والمال</div>
+      <div class="card-date">Oct 10, 2026</div>
+    </article>
+
+    <!-- Week 20 -->
+    <article class="card" data-pillar="ai">
+      <div class="card-week-badge">20</div>
+      <div class="card-pillar p-ai">🤖 AI in Business</div>
+      <div class="card-title en-title">AI and Short-Form Video: The Future of Social Content</div>
+      <div class="card-title ar-title ar" style="display:none">الذكاء الاصطناعي والفيديو القصير: مستقبل محتوى السوشال</div>
+      <div class="card-date">Oct 17, 2026</div>
+    </article>
+
+    <!-- Week 21-26 AI -->
+    <article class="card" data-pillar="ai"><div class="card-week-badge">21</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">Can AI Manage Your Social Media Accounts?</div><div class="card-title ar-title ar" style="display:none">هل يمكن للذكاء الاصطناعي إدارة حسابات التواصل؟</div><div class="card-date">Oct 24, 2026</div></article>
+    <article class="card" data-pillar="ai"><div class="card-week-badge">22</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">AI-Powered Email Marketing: What's Working Right Now</div><div class="card-title ar-title ar" style="display:none">التسويق بالبريد مع الذكاء الاصطناعي: ما يعمل الآن</div><div class="card-date">Oct 31, 2026</div></article>
+    <article class="card" data-pillar="ai"><div class="card-week-badge">23</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">Using AI for Customer Service: A Small Business Guide</div><div class="card-title ar-title ar" style="display:none">استخدام الذكاء الاصطناعي في خدمة العملاء</div><div class="card-date">Nov 7, 2026</div></article>
+    <article class="card" data-pillar="ai"><div class="card-week-badge">24</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">AI Analytics: Understanding Your Customers Better Than Ever</div><div class="card-title ar-title ar" style="display:none">تحليلات الذكاء الاصطناعي: افهم عملاءك أعمق</div><div class="card-date">Nov 14, 2026</div></article>
+    <article class="card" data-pillar="ai"><div class="card-week-badge">25</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">The Ethics of AI in Marketing: What Every Owner Must Know</div><div class="card-title ar-title ar" style="display:none">أخلاقيات الذكاء الاصطناعي في التسويق</div><div class="card-date">Nov 21, 2026</div></article>
+    <article class="card" data-pillar="ai"><div class="card-week-badge">26</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">AI and SEO: How Search Is Changing in 2026</div><div class="card-title ar-title ar" style="display:none">الذكاء الاصطناعي والسيو: كيف يتغير البحث</div><div class="card-date">Nov 28, 2026</div></article>
+
+    <!-- Week 27-39 Social Media -->
+    <article class="card" data-pillar="sm"><div class="card-week-badge">27</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Manage a Professional Facebook Page That Drives Results</div><div class="card-title ar-title ar" style="display:none">كيف تدير صفحة فيسبوك احترافية تحقق نتائج حقيقية؟</div><div class="card-date">Dec 5, 2026</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">28</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Best Times to Post on Social Media for Maximum Engagement</div><div class="card-title ar-title ar" style="display:none">أفضل أوقات النشر لأعلى تفاعل</div><div class="card-date">Dec 12, 2026</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">29</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Why Every Small Business Needs a Strong Social Media Presence</div><div class="card-title ar-title ar" style="display:none">لماذا يحتاج كل مشروع حضوراً قوياً على السوشال؟</div><div class="card-date">Dec 19, 2026</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">30</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">The Data-Backed Secret Behind Viral Reels and Short Videos</div><div class="card-title ar-title ar" style="display:none">سر الريلز والفيديوهات الناجحة — بالأرقام</div><div class="card-date">Dec 26, 2026</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">31</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Increase Engagement on Your Social Media Posts</div><div class="card-title ar-title ar" style="display:none">كيف تزيد التفاعل على منشوراتك؟</div><div class="card-date">Jan 2, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">32</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">A Simple Weekly Social Media Plan for Small Business Owners</div><div class="card-title ar-title ar" style="display:none">خطة أسبوعية بسيطة لإدارة السوشال ميديا</div><div class="card-date">Jan 9, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">33</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Create Content That Attracts Local Customers</div><div class="card-title ar-title ar" style="display:none">كيف تنشئ محتوى يجذب العملاء المحليين؟</div><div class="card-date">Jan 16, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">34</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Best Free Tools for Social Media Management in 2027</div><div class="card-title ar-title ar" style="display:none">أفضل الأدوات المجانية لإدارة السوشال ميديا 2027</div><div class="card-date">Jan 23, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">35</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Stay Consistent on Social Media Without Burning Out</div><div class="card-title ar-title ar" style="display:none">كيف تحافظ على الاتساق بدون إرهاق؟</div><div class="card-date">Jan 30, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">36</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Building a Loyal Online Community Around Your Brand</div><div class="card-title ar-title ar" style="display:none">كيف تبني مجتمعاً أونلاين مخلصاً لعلامتك؟</div><div class="card-date">Feb 6, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">37</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Instagram vs. Facebook vs. LinkedIn: Which Platform Is Right for You?</div><div class="card-title ar-title ar" style="display:none">إنستغرام vs فيسبوك vs لينكدإن: أيهم يناسبك؟</div><div class="card-date">Feb 13, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">38</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">TikTok for Small Business: Is It Worth the Investment in 2027?</div><div class="card-title ar-title ar" style="display:none">تيك توك للمشاريع: هل يستحق الاستثمار في 2027؟</div><div class="card-date">Feb 20, 2027</div></article>
+    <article class="card" data-pillar="sm"><div class="card-week-badge">39</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Social Proof: How to Use Reviews to Drive More Sales</div><div class="card-title ar-title ar" style="display:none">الدليل الاجتماعي: كيف تستخدم التقييمات لزيادة المبيعات؟</div><div class="card-date">Feb 27, 2027</div></article>
+
+    <!-- Week 40-52 Growth -->
+    <article class="card" data-pillar="gr"><div class="card-week-badge">40</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Video Marketing for Small Businesses: Where to Start</div><div class="card-title ar-title ar" style="display:none">تسويق الفيديو للمشاريع الصغيرة: من أين تبدأ؟</div><div class="card-date">Mar 6, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">41</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">How to Write Headlines That Actually Get Clicks</div><div class="card-title ar-title ar" style="display:none">كيف تكتب عناوين تجذب النقرات فعلاً؟</div><div class="card-date">Mar 13, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">42</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Landing Pages That Convert: What Small Businesses Get Wrong</div><div class="card-title ar-title ar" style="display:none">صفحات الهبوط التي تحوّل: الأخطاء الشائعة</div><div class="card-date">Mar 20, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">43</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Marketing on a Budget: Best Free Strategies for 2027</div><div class="card-title ar-title ar" style="display:none">التسويق بميزانية محدودة: أفضل الاستراتيجيات المجانية</div><div class="card-date">Mar 27, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">44</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">The Power of Customer Reviews and How to Get More</div><div class="card-title ar-title ar" style="display:none">قوة تقييمات العملاء وكيف تحصل على المزيد</div><div class="card-date">Apr 3, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">45</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Hashtag Strategy: What Actually Works (and What Doesn't)</div><div class="card-title ar-title ar" style="display:none">استراتيجية الهاشتاق: ما يعمل وما لا يعمل</div><div class="card-date">Apr 10, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">46</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Social Media Analytics: The Metrics That Actually Matter</div><div class="card-title ar-title ar" style="display:none">تحليلات السوشال ميديا: الأرقام التي تهم فعلاً</div><div class="card-date">Apr 17, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">47</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">How to Write a Simple Marketing Plan for Your Business</div><div class="card-title ar-title ar" style="display:none">كيف تكتب خطة تسويقية بسيطة لمشروعك؟</div><div class="card-date">Apr 24, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">48</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Omnichannel Marketing: Why Your Business Needs to Be Everywhere</div><div class="card-title ar-title ar" style="display:none">التسويق متعدد القنوات: لماذا تكون في كل مكان؟</div><div class="card-date">May 1, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">49</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Personal Branding for Small Business Owners: Your Biggest Edge</div><div class="card-title ar-title ar" style="display:none">العلامة الشخصية: ميزتك التنافسية الأكبر</div><div class="card-date">May 8, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">50</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">AI Chatbots for Small Business: Are They Worth It?</div><div class="card-title ar-title ar" style="display:none">روبوتات الدردشة بالذكاء الاصطناعي: هل تستحق؟</div><div class="card-date">May 15, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">51</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Building a Complete AI-Assisted Marketing Strategy From Scratch</div><div class="card-title ar-title ar" style="display:none">بناء استراتيجية تسويق متكاملة بالذكاء الاصطناعي</div><div class="card-date">May 22, 2027</div></article>
+    <article class="card" data-pillar="gr"><div class="card-week-badge">52</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Year in Review: The Biggest Digital Marketing Lessons of 2026–2027</div><div class="card-title ar-title ar" style="display:none">مراجعة عام كامل: أهم دروس التسويق الرقمي 2026–2027</div><div class="card-date">May 29, 2027</div></article>
+
+  </div><!-- /grid -->
+</section>
+
+<footer>
+  <div class="footer-brand">© 2026 Sanose Rabih | AI Marketing Specialist</div>
+  <div class="footer-note">sanoserabih.com · Published every Saturday</div>
+</footer>
+
+<script>
+// ── Language toggle ──
+let currentLang = 'en';
+function setLang(lang, btn) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // Cards
+  document.querySelectorAll('.en-title').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+  document.querySelectorAll('.ar-title').forEach(el => el.style.display = lang === 'ar' ? 'block' : 'none');
+  // Featured
+  const featTitle = document.getElementById('feat-title');
+  const featDesc = document.getElementById('feat-desc');
+  if (lang === 'ar') {
+    document.documentElement.setAttribute('dir','rtl');
+    featTitle.textContent = 'لماذا يحتاج كل مشروع صغير إلى التسويق الرقمي في 2026؟';
+    featTitle.style.fontFamily = "'Cairo', sans-serif";
+    featDesc.textContent = 'الإنترنت هو المكان الذي يعيش فيه عملاؤك، يبحثون ويقارنون ويشترون. في 2026، السؤال ليس هل يجب أن تكون أونلاين، بل كيف تظهر بالشكل الصحيح حين يحتاجك عميلك.';
+    featDesc.style.direction = 'rtl';
+  } else {
+    document.documentElement.setAttribute('dir','ltr');
+    featTitle.textContent = 'Why Every Small Business Needs Digital Marketing in 2026';
+    featTitle.style.fontFamily = "'Playfair Display', serif";
+    featDesc.textContent = 'The internet is where your customers live, research, compare, and buy. In 2026, the question is not whether your small business should be online — but how well you show up when it matters.';
+    featDesc.style.direction = 'ltr';
+  }
+}
+
+// ── Pillar filter ──
+let currentPillar = 'all';
+function filterPillar(pillar, el) {
+  currentPillar = pillar;
+  // Reset all pills
+  document.querySelectorAll('.pillar-pill').forEach(p => {
+    p.className = p.className.replace(/all-active|active-dm|active-ai|active-sm|active-gr/g,'').trim();
+  });
+  // Set active
+  if (pillar === 'all') el.classList.add('all-active');
+  else el.classList.add('active-' + pillar);
+
+  const cards = document.querySelectorAll('#grid .card');
+  let visible = 0;
+  cards.forEach(c => {
+    const show = pillar === 'all' || c.dataset.pillar === pillar;
+    c.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  document.getElementById('countLabel').innerHTML = '<strong>' + visible + '</strong> scheduled';
+}
+</script>
+</body>
+</html>
