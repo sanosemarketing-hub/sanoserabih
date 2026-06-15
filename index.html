@@ -1,624 +1,2384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Blog — Sanose Rabih | AI Marketing</title>
-<meta name="description" content="Weekly insights on digital marketing, AI in business, and social media strategy for small business owners. Published every Saturday."/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cairo:wght@300;400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sanose Rabih — AI Marketing Specialist. Professional bilingual content, brand design and digital marketing for small businesses in the USA.">
+<meta name="keywords" content="AI marketing, social media, Arabic English content, halal business, Sacramento, legal marketing">
+<meta name="author" content="Sanose Rabih">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Sanose Rabih | AI Marketing Specialist">
+<meta property="og:description" content="Professional AI-powered marketing — English & Arabic content, brand design and digital strategy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sanoserabih.com/">
+<meta property="og:image" content="https://sanoserabih.com/og-image.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sanose Rabih | AI Marketing Specialist">
+<meta name="twitter:description" content="Professional AI-powered marketing — English & Arabic content, brand design and digital strategy.">
+<meta name="twitter:image" content="https://sanoserabih.com/og-image.jpeg">
+<link rel="canonical" href="https://sanoserabih.com/">
+<link rel="alternate" hreflang="en" href="https://sanoserabih.com/">
+<link rel="alternate" hreflang="ar" href="https://sanoserabih.com/">
+<link rel="alternate" hreflang="x-default" href="https://sanoserabih.com/"><title>Sanose Rabih | AI Marketing Specialist</title>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNCYJWND7H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BNCYJWND7H');
+</script>
+
+<!-- Cloudflare Turnstile (spam protection for the form) -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sanoserabih.com/#person",
+      "name": "Sanose Rabih",
+      "jobTitle": "AI Marketing Specialist",
+      "description": "Bilingual AI Marketing Specialist (English & Arabic) serving small businesses across the USA with professional content, brand design and digital marketing.",
+      "url": "https://sanoserabih.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-916-420-5814",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Arabic"]
+      },
+      "knowsLanguage": ["en", "ar"],
+      "sameAs": [
+        "https://www.fiverr.com/sanoserabih",
+        "https://www.facebook.com/sanoserabih"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://sanoserabih.com/#business",
+      "name": "Sanose Rabih | AI Marketing",
+      "description": "Professional AI-powered marketing services — bilingual English & Arabic content, brand design and digital strategy for small businesses in the USA.",
+      "url": "https://sanoserabih.com",
+      "telephone": "+1-916-420-5814",
+      "email": "sanose.marketing@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.5816,
+        "longitude": -121.4944
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Credit Card, PayPal",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "serviceType": ["Social Media Marketing", "Brand Identity Design", "AI Marketing", "Bilingual Content Creation", "Legal Marketing"]
+    }
+  ]
+}
+</script>
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:rgba(201,168,76,0.13);
-  --dark:#0B0B09;--card:#131310;--card2:#181814;
-  --t1:#F0EAE0;--t2:#B8A880;--t3:#7A6A4A;--t4:#4A3A1A;
-  --border:rgba(201,168,76,0.16);--border2:rgba(201,168,76,0.08);
+/* ═══════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════ */
+:root {
+  --gold:    #C9A84C;
+  --gold-lt: #E8C96A;
+  --gold-dk: #8A6520;
+  --black:   #050608;
+  --dark:    #080A10;
+  --dark-2:  #0D1018;
+  --dark-3:  #131720;
+  --white:   #F5F2EC;
+  --muted:   rgba(245,242,236,0.50);
+  --border:  rgba(201,168,76,0.15);
+  --bord-h:  rgba(201,168,76,0.40);
+  --r:       8px;
+  --font: 'Outfit', sans-serif;
+  --font-d: 'Cinzel', serif;
 }
-html{scroll-behavior:smooth}
-body{background:var(--dark);color:var(--t1);font-family:'Source Sans 3',sans-serif;font-weight:300;line-height:1.7;min-height:100vh}
+html[lang="ar"] {
+  --font: 'Cairo', sans-serif;
+  --font-d: 'Cairo', sans-serif;
+}
 
-/* ── NAV ── */
-nav{
-  position:sticky;top:0;z-index:200;
-  background:rgba(11,11,9,0.92);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border);
-  padding:0 40px;height:60px;
-  display:flex;align-items:center;justify-content:space-between;
+/* ═══════════════════════════════════════
+   RESET & BASE — MOBILE FIRST
+═══════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: var(--font);
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
 }
-.nav-logo{color:var(--gold);font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:600;text-decoration:none}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:var(--t3);font-size:13px;text-decoration:none;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+img { max-width:100%; display:block; }
+a { text-decoration:none; }
+button { cursor:pointer; font-family:inherit; border:none; background:none; }
 
-/* ── HERO ── */
-.hero{
-  background:linear-gradient(170deg,#12120A 0%,#0D0D08 60%,#0B0B09 100%);
-  border-bottom:1px solid var(--border);
-  padding:80px 40px 64px;position:relative;overflow:hidden;
-}
-.hero::before{
-  content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);
-  width:800px;height:400px;
-  background:radial-gradient(ellipse,rgba(201,168,76,0.055) 0%,transparent 70%);
-  pointer-events:none;
-}
-.hero-inner{max-width:1100px;margin:0 auto;position:relative}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;
-  font-weight:600;margin-bottom:20px;
-}
-.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(30px,5vw,54px);font-weight:700;
-  line-height:1.15;color:var(--t1);margin-bottom:16px;letter-spacing:-0.5px;
-}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero-sub{font-size:17px;color:var(--t2);max-width:580px;margin-bottom:36px}
+/* scrollbar */
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:var(--black); }
+::-webkit-scrollbar-thumb { background:var(--gold-dk); border-radius:2px; }
 
-/* Progress bar */
-.progress-block{
-  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+/* ── Grain overlay ── */
+body::after {
+  content:'';
+  position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9990; opacity:.6;
 }
-.progress-track{
-  width:240px;height:4px;background:rgba(201,168,76,0.12);
-  border-radius:2px;position:relative;overflow:hidden;
-}
-.progress-fill{
-  height:100%;width:1.92%; /* 1/52 */
-  background:linear-gradient(to right,#8B6914,#C9A84C);
-  border-radius:2px;
-  animation:fillUp .8s ease forwards;
-}
-@keyframes fillUp{from{width:0}to{width:1.92%}}
-.progress-label{font-size:13px;color:var(--t3)}
-.progress-label strong{color:var(--gold)}
 
-/* Pillar pills */
-.pillars-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.pillar-pill{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:6px 14px;border-radius:20px;font-size:12px;
-  border:1px solid;cursor:pointer;transition:all .18s;user-select:none;
-}
-.pillar-pill.dm{color:#C9A84C;border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.06)}
-.pillar-pill.ai{color:#7EB8D4;border-color:rgba(126,184,212,.3);background:rgba(126,184,212,.06)}
-.pillar-pill.sm{color:#C47EC4;border-color:rgba(196,126,196,.3);background:rgba(196,126,196,.06)}
-.pillar-pill.gr{color:#7EC47E;border-color:rgba(126,196,126,.3);background:rgba(126,196,126,.06)}
-.pillar-pill.active-dm{background:rgba(201,168,76,.18);border-color:rgba(201,168,76,.5)}
-.pillar-pill.active-ai{background:rgba(126,184,212,.18);border-color:rgba(126,184,212,.5)}
-.pillar-pill.active-sm{background:rgba(196,126,196,.18);border-color:rgba(196,126,196,.5)}
-.pillar-pill.active-gr{background:rgba(126,196,126,.18);border-color:rgba(126,196,126,.5)}
-.pillar-pill.all-active{background:var(--gold-dim);border-color:rgba(201,168,76,.4);color:var(--gold)}
+/* ── Utility ── */
+.gold { color:var(--gold); }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity .65s ease, transform .65s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
 
-/* ── LANG TOGGLE ── */
-.lang-toggle{
-  display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-right:16px;
-}
-.lang-btn{
-  padding:6px 16px;border:none;background:transparent;
-  color:var(--t3);font-size:13px;cursor:pointer;transition:all .18s;font-family:'Source Sans 3',sans-serif;
-}
-.lang-btn.active{background:var(--gold);color:#0B0B09;font-weight:600}
+/* ═══════════════════════════════════════
+   SR HEXAGON SVG — shared
+═══════════════════════════════════════ */
+.sr-hex { display:block; flex-shrink:0; }
 
-/* ── FEATURED ARTICLE ── */
-.section{max-width:1100px;margin:0 auto;padding:60px 40px}
-.section-label{
-  font-size:10px;letter-spacing:3px;text-transform:uppercase;
-  color:var(--gold);font-weight:600;margin-bottom:24px;
-  display:flex;align-items:center;gap:10px;
+/* ═══════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════ */
+#nav {
+  position:fixed; top:0; left:0; right:0; z-index:500;
+  padding:16px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+  transition:background .4s, padding .4s, box-shadow .4s;
 }
-.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
-
-.featured{
-  display:grid;grid-template-columns:1fr 420px;gap:40px;
-  background:var(--card);border:1px solid rgba(201,168,76,.22);
-  border-radius:16px;overflow:hidden;position:relative;
-  transition:border-color .2s;
+#nav.scrolled {
+  background:rgba(5,6,8,.92);
+  backdrop-filter:blur(16px);
+  padding:11px 20px;
+  box-shadow:0 1px 0 var(--border);
 }
-.featured:hover{border-color:rgba(201,168,76,.4)}
-.featured::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(to right,transparent,var(--gold),transparent);
+.nav-logo {
+  display:flex; align-items:center; gap:10px;
 }
-.feat-body{padding:44px 40px}
-.feat-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-.feat-week{
-  background:linear-gradient(135deg,#C9A84C,#8B6914);
-  color:#0B0B09;font-size:11px;font-weight:700;
-  padding:4px 12px;border-radius:12px;letter-spacing:1px;
+.nav-logo-text { line-height:1.2; }
+.nav-logo-name {
+  font-family:var(--font-d);
+  font-size:14px; font-weight:700;
+  color:var(--white); letter-spacing:.06em;
 }
-.feat-tag{
-  background:var(--gold-dim);border:1px solid rgba(201,168,76,.3);
-  color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;
-  padding:3px 10px;border-radius:12px;font-weight:600;
+.nav-logo-sub {
+  font-size:8px; font-weight:500;
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); opacity:.8;
+  display:block; margin-top:1px;
 }
-.feat-date{color:var(--t3);font-size:12px}
-.feat-body h2{
-  font-family:'Playfair Display',serif;font-size:clamp(20px,2.8vw,30px);
-  font-weight:700;line-height:1.25;color:var(--t1);margin-bottom:14px;
+/* Desktop nav links — hidden on mobile */
+.nav-links-desk {
+  display:none;
+  list-style:none; gap:28px; align-items:center;
 }
-.feat-body p{color:var(--t2);font-size:15px;margin-bottom:28px;line-height:1.7}
-.feat-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn-en{
-  display:inline-flex;align-items:center;gap:6px;
-  background:linear-gradient(135deg,#C9A84C,#8B6914);
-  color:#0B0B09;font-weight:700;font-size:13px;
-  padding:11px 22px;border-radius:7px;text-decoration:none;
-  transition:opacity .2s;letter-spacing:.5px;
-}
-.btn-en:hover{opacity:.85}
-.btn-ar{
-  display:inline-flex;align-items:center;gap:6px;
-  background:transparent;border:1px solid rgba(201,168,76,.35);
-  color:var(--gold);font-size:13px;
-  padding:11px 22px;border-radius:7px;text-decoration:none;
-  transition:all .2s;
-}
-.btn-ar:hover{background:var(--gold-dim);border-color:rgba(201,168,76,.5)}
-.feat-visual{
-  background:linear-gradient(135deg,#1A1800,#111106);
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:12px;padding:40px 32px;
-  border-right:1px solid var(--border2);
-}
-.feat-big-num{
-  font-family:'Playfair Display',serif;
-  font-size:90px;font-weight:700;
-  color:rgba(201,168,76,0.12);line-height:1;
+.nav-links-desk a {
+  font-size:11.5px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); transition:color .3s;
   position:relative;
 }
-.feat-big-num::after{
-  content:'01';position:absolute;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  font-size:72px;color:var(--gold);opacity:.25;
+.nav-links-desk a::after {
+  content:''; position:absolute; bottom:-3px; left:0; right:0;
+  height:1px; background:var(--gold);
+  transform:scaleX(0); transform-origin:left; transition:transform .3s;
 }
-.feat-stats{display:flex;flex-direction:column;gap:12px;width:100%}
-.feat-stat{
-  background:rgba(201,168,76,0.06);border:1px solid var(--border2);
-  border-radius:8px;padding:10px 14px;text-align:center;
+.nav-links-desk a:hover { color:var(--white); }
+.nav-links-desk a:hover::after { transform:scaleX(1); }
+.nav-cta-btn {
+  background:var(--gold); color:var(--black);
+  font-size:11px; font-weight:800;
+  letter-spacing:.14em; text-transform:uppercase;
+  padding:9px 18px; border-radius:4px;
+  transition:background .3s;
 }
-.feat-stat-n{font-size:22px;font-weight:700;color:var(--gold);font-family:'Playfair Display',serif}
-.feat-stat-l{font-size:11px;color:var(--t3);margin-top:2px}
+.nav-cta-btn:hover { background:var(--gold-lt); color:var(--black); }
+/* Lang switcher */
+.lang-sw {
+  display:flex; border:1px solid var(--border); border-radius:5px; overflow:hidden;
+}
+.lang-sw button {
+  padding:6px 12px; font-size:10.5px; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted); transition:background .25s, color .25s;
+}
+.lang-sw button.on { background:var(--gold); color:var(--black); }
+.lang-sw button:hover:not(.on) { color:var(--white); }
+/* Hamburger */
+.hamburger {
+  display:flex; flex-direction:column; gap:5px;
+  padding:7px; border-radius:5px;
+  background:rgba(201,168,76,.07);
+  border:1px solid rgba(201,168,76,.22);
+  transition:background .3s;
+}
+.hamburger span {
+  display:block; width:18px; height:2px;
+  background:var(--gold); border-radius:1px;
+  transition:all .3s;
+}
+.hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+.nav-right { display:flex; align-items:center; gap:10px; }
 
-/* ── ARTICLES GRID ── */
-.articles-controls{
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:16px;margin-bottom:28px;
+/* ── Mobile Menu Overlay ── */
+#mob-menu {
+  display:none; position:fixed; inset:0; z-index:450;
+  background:rgba(5,6,8,.97); backdrop-filter:blur(20px);
+  flex-direction:column; align-items:center; justify-content:center; gap:28px;
 }
-.article-count{font-size:13px;color:var(--t3)}
-.article-count strong{color:var(--t2)}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-
-.card{
-  background:var(--card);border:1px solid var(--border2);
-  border-radius:12px;padding:24px;
-  transition:all .18s;cursor:default;position:relative;overflow:hidden;
-  display:flex;flex-direction:column;
+#mob-menu.open { display:flex; }
+#mob-menu a {
+  font-family:var(--font-d);
+  font-size:20px; font-weight:700;
+  color:var(--white); letter-spacing:.06em;
+  transition:color .3s;
 }
-.card:hover{border-color:rgba(201,168,76,.25);background:var(--card2);transform:translateY(-2px)}
-.card-week-badge{
-  position:absolute;top:16px;right:16px;
-  width:30px;height:30px;border-radius:50%;
-  background:rgba(255,255,255,0.04);border:1px solid var(--border2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:11px;color:var(--t4);font-family:'Source Sans 3',sans-serif;font-weight:600;
+html[lang="ar"] #mob-menu a { font-size:22px; }
+#mob-menu a:hover { color:var(--gold); }
+#mob-menu a.mob-cta { color:var(--gold); }
+.mob-menu-lang {
+  display:flex; border:1px solid var(--border); border-radius:5px;
+  overflow:hidden; margin-top:8px;
 }
-.card-pillar{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
-  font-weight:600;padding:3px 10px;border-radius:10px;border:1px solid;
-  margin-bottom:12px;width:fit-content;
+.mob-menu-lang button {
+  padding:9px 22px; font-size:11px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); transition:background .25s, color .25s;
 }
-.p-dm{color:#C9A84C;border-color:rgba(201,168,76,.25);background:rgba(201,168,76,.07)}
-.p-ai{color:#7EB8D4;border-color:rgba(126,184,212,.25);background:rgba(126,184,212,.07)}
-.p-sm{color:#C47EC4;border-color:rgba(196,126,196,.25);background:rgba(196,126,196,.07)}
-.p-gr{color:#7EC47E;border-color:rgba(126,196,126,.25);background:rgba(126,196,126,.07)}
+.mob-menu-lang button.on { background:var(--gold); color:var(--black); }
 
-.card-title{
-  font-family:'Playfair Display',serif;font-size:16px;
-  font-weight:600;color:var(--t1);line-height:1.35;
-  margin-bottom:10px;flex:1;padding-right:36px;
+/* ═══════════════════════════════════════
+   HERO — Mobile First
+═══════════════════════════════════════ */
+#hero {
+  min-height:100svh;
+  display:flex; flex-direction:column;
+  justify-content:center; align-items:center;
+  text-align:center;
+  padding:100px 24px 60px;
+  position:relative; overflow:hidden;
 }
-.card-title.ar{direction:rtl;font-family:'Cairo',sans-serif;font-weight:700;padding-right:0;padding-left:36px}
-.card-date{font-size:12px;color:var(--t3);margin-top:auto;padding-top:14px;border-top:1px solid var(--border2)}
+/* Orbs — simplified, GPU-friendly */
+.orb {
+  position:absolute; border-radius:50%;
+  pointer-events:none;
+  will-change:transform;
+  animation:orb 9s ease-in-out infinite;
+}
+.orb-1 {
+  width:min(600px,90vw); height:min(600px,90vw);
+  background:radial-gradient(circle,rgba(201,168,76,.11),transparent 65%);
+  top:-20%; right:-20%; filter:blur(60px);
+}
+.orb-2 {
+  width:min(400px,70vw); height:min(400px,70vw);
+  background:radial-gradient(circle,rgba(20,40,120,.15),transparent 65%);
+  bottom:-15%; left:-15%; filter:blur(50px);
+  animation-delay:4s;
+}
+@keyframes orb {
+  0%,100%{ transform:translate(0,0); }
+  50%{ transform:translate(20px,-20px); }
+}
+/* Grid */
+.hero-grid {
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(201,168,76,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,168,76,.035) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent);
+}
 
-/* hidden */
-.card.hidden{display:none}
+.hero-inner {
+  position:relative; z-index:5;
+  max-width:680px; width:100%;
+}
 
-/* ── FOOTER ── */
-footer{
+/* Badge */
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid var(--bord-h); background:rgba(201,168,76,.06);
+  border-radius:30px; padding:5px 14px; margin-bottom:28px;
+  animation:fadeUp .7s ease both;
+}
+.bdot {
+  width:6px; height:6px; border-radius:50%; background:var(--gold);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+.hero-badge span {
+  font-size:10.5px; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--gold);
+}
+
+/* Title */
+.hero-title {
+  font-family:var(--font-d);
+  font-size:clamp(36px,9vw,80px);
+  font-weight:900; line-height:.95;
+  letter-spacing:-.02em;
+  margin-bottom:20px;
+  animation:fadeUp .7s ease .12s both;
+}
+html[lang="ar"] .hero-title {
+  font-size:clamp(30px,8vw,68px);
+  line-height:1.1; letter-spacing:0;
+}
+.hero-title .t2 {
+  display:block;
+  background:linear-gradient(90deg,#E8C96A,#C9A84C,#9A7230);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* Sub */
+.hero-sub {
+  font-size:clamp(14px,3.5vw,17px);
+  font-weight:300; color:var(--muted);
+  line-height:1.75; margin-bottom:36px;
+  animation:fadeUp .7s ease .24s both;
+}
+html[lang="ar"] .hero-sub { font-size:clamp(13px,3.5vw,16px); line-height:1.9; }
+.hero-sub b { color:var(--white); font-weight:500; }
+
+/* CTAs */
+.hero-ctas {
+  display:flex; flex-direction:column;
+  align-items:center; gap:12px; margin-bottom:44px;
+  animation:fadeUp .7s ease .36s both;
+}
+.btn-gold {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  width:100%; max-width:300px;
+  background:linear-gradient(135deg,#C9A84C,#E8C96A);
+  color:var(--black);
+  font-family:var(--font);
+  font-size:12px; font-weight:800;
+  letter-spacing:.14em; text-transform:uppercase;
+  padding:15px 24px; border-radius:5px;
+  box-shadow:0 6px 24px rgba(201,168,76,.22);
+  transition:transform .25s, box-shadow .25s;
+}
+.btn-gold:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(201,168,76,.32); }
+.btn-outline {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  width:100%; max-width:300px;
+  border:1px solid var(--bord-h); color:var(--white);
+  font-size:12px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase;
+  padding:15px 24px; border-radius:5px;
+  transition:border-color .3s, background .3s;
+}
+.btn-outline:hover { border-color:var(--gold); background:rgba(201,168,76,.06); }
+
+/* Stats */
+.hero-stats {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:16px 24px;
+  padding-top:32px;
   border-top:1px solid var(--border);
-  padding:32px 40px;
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:12px;max-width:1100px;margin:0 auto;
+  animation:fadeUp .7s ease .48s both;
 }
-.footer-brand{color:var(--t3);font-size:12px}
-.footer-note{color:var(--t4);font-size:12px}
+.stat { text-align:center; }
+.stat-n {
+  font-family:var(--font-d);
+  font-size:clamp(24px,6vw,36px); font-weight:700;
+  color:var(--gold); display:block; line-height:1;
+}
+html[lang="ar"] .stat-n { letter-spacing:0; }
+.stat-l {
+  font-size:10px; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); display:block; margin-top:5px;
+}
+html[lang="ar"] .stat-l { letter-spacing:.04em; }
 
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  .featured{grid-template-columns:1fr}
-  .feat-visual{display:none}
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+/* ═══════════════════════════════════════
+   SECTIONS — COMMON
+═══════════════════════════════════════ */
+.section { padding:64px 24px; }
+.section-dark { background:var(--dark); }
+
+.eyebrow {
+  display:flex; align-items:center; gap:10px; margin-bottom:14px;
 }
-@media(max-width:600px){
-  nav{padding:0 16px}.hero{padding:60px 16px 48px}.section{padding:40px 16px}
-  .nav-links{display:none}
-  .grid{grid-template-columns:1fr}
-  footer{padding:24px 16px}
+.eyebrow-center { justify-content:center; }
+.eline { width:24px; height:1px; background:var(--gold); flex-shrink:0; }
+.etxt {
+  font-size:10px; font-weight:700;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--gold);
+}
+html[lang="ar"] .etxt { letter-spacing:.06em; }
+
+.sec-title {
+  font-family:var(--font-d);
+  font-size:clamp(26px,6vw,48px);
+  font-weight:700; line-height:1.05; margin-bottom:14px;
+}
+html[lang="ar"] .sec-title { font-size:clamp(22px,5.5vw,42px); line-height:1.2; letter-spacing:0; }
+.sec-sub {
+  font-size:14.5px; font-weight:300;
+  color:var(--muted); line-height:1.75; margin-bottom:40px;
+}
+html[lang="ar"] .sec-sub { font-size:14px; line-height:1.9; }
+
+/* ═══════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════ */
+.svc-grid {
+  display:grid; grid-template-columns:1fr; gap:1px;
+  background:var(--border);
+  border:1px solid var(--border); border-radius:var(--r); overflow:hidden;
+}
+.svc-card {
+  background:var(--dark-2); padding:28px 24px;
+  position:relative; overflow:hidden;
+  transition:background .3s;
+}
+.svc-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  transform:scaleX(0); transform-origin:center; transition:transform .4s;
+}
+.svc-card:hover { background:var(--dark-3); }
+.svc-card:hover::before { transform:scaleX(1); }
+.svc-icon {
+  width:46px; height:46px;
+  background:rgba(201,168,76,.08); border:1px solid var(--bord-h);
+  border-radius:9px; display:flex; align-items:center; justify-content:center;
+  font-size:20px; margin-bottom:18px;
+}
+.svc-title {
+  font-family:var(--font-d);
+  font-size:16px; font-weight:700; color:var(--white);
+  letter-spacing:.02em; margin-bottom:10px;
+}
+html[lang="ar"] .svc-title { font-size:15px; letter-spacing:0; }
+.svc-desc {
+  font-size:13px; font-weight:300;
+  color:var(--muted); line-height:1.7; margin-bottom:18px;
+}
+html[lang="ar"] .svc-desc { font-size:12.5px; line-height:1.9; }
+.tags { display:flex; flex-wrap:wrap; gap:5px; }
+.tag {
+  font-size:9.5px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold); border:1px solid rgba(201,168,76,.25);
+  border-radius:30px; padding:3px 9px;
+  background:rgba(201,168,76,.05);
 }
 
-/* entrance animation */
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.hero-inner,.featured,.card{animation:fadeUp .5s ease both}
-.card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.1s}
-.card:nth-child(3){animation-delay:.15s}.card:nth-child(4){animation-delay:.2s}
+/* ═══════════════════════════════════════
+   INDUSTRIES
+═══════════════════════════════════════ */
+.ind-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+}
+.ind-card {
+  border:1px solid var(--border); border-radius:9px;
+  background:var(--dark-2);
+  padding:20px 12px;
+  display:flex; flex-direction:column; align-items:center; gap:9px;
+  text-align:center;
+  transition:border-color .3s, transform .3s;
+}
+.ind-card:hover { border-color:var(--gold); transform:translateY(-3px); }
+.ind-ic { font-size:26px; }
+.ind-nm {
+  font-size:10.5px; font-weight:600;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted); line-height:1.3;
+}
+html[lang="ar"] .ind-nm { letter-spacing:0; font-size:11px; }
+
+/* ═══════════════════════════════════════
+   PORTFOLIO
+═══════════════════════════════════════ */
+.port-grid {
+  display:grid; grid-template-columns:1fr; gap:16px;
+}
+.port-item {
+  border:1px solid var(--border); border-radius:10px;
+  overflow:hidden; background:var(--dark-2);
+  transition:transform .3s, border-color .3s, box-shadow .3s;
+}
+.port-item:hover {
+  transform:translateY(-4px);
+  border-color:var(--bord-h);
+  box-shadow:0 16px 40px rgba(201,168,76,.10);
+}
+.port-prev {
+  height:140px; display:flex; align-items:center; justify-content:center;
+  position:relative; font-size:44px;
+}
+.port-prev-glow {
+  position:absolute; inset:0; opacity:.15;
+}
+.port-info { padding:20px 22px; }
+.port-ind {
+  font-size:9px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); display:block; margin-bottom:7px;
+}
+.port-t {
+  font-family:var(--font-d);
+  font-size:15px; font-weight:700; color:var(--white); margin-bottom:8px;
+}
+html[lang="ar"] .port-t { font-size:14px; letter-spacing:0; }
+.port-d {
+  font-size:12.5px; color:var(--muted); line-height:1.65; margin-bottom:12px;
+}
+html[lang="ar"] .port-d { font-size:12px; line-height:1.85; }
+
+/* ═══════════════════════════════════════
+   PRICING
+═══════════════════════════════════════ */
+.price-grid {
+  display:grid; grid-template-columns:1fr; gap:16px;
+}
+.price-card {
+  border:1px solid var(--border); border-radius:12px;
+  padding:32px 24px; background:var(--dark-2);
+  position:relative; overflow:hidden;
+  transition:transform .3s, border-color .3s, box-shadow .3s;
+}
+.price-card:hover {
+  transform:translateY(-4px);
+  border-color:var(--bord-h);
+  box-shadow:0 20px 50px rgba(201,168,76,.10);
+}
+.price-card.feat {
+  border-color:var(--gold);
+  background:linear-gradient(160deg,var(--dark-3),rgba(201,168,76,.06));
+  box-shadow:0 0 40px rgba(201,168,76,.10);
+}
+.feat-badge {
+  position:absolute; top:16px; right:16px;
+  background:var(--gold); color:var(--black);
+  font-size:8.5px; font-weight:800;
+  letter-spacing:.16em; text-transform:uppercase;
+  padding:3px 9px; border-radius:30px;
+}
+html[lang="ar"] .feat-badge { right:auto; left:16px; letter-spacing:.04em; }
+.price-tier {
+  font-size:10px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:14px;
+}
+.price-val {
+  font-family:'Cinzel',serif;
+  font-size:48px; font-weight:900; color:var(--white);
+  line-height:1; margin-bottom:5px;
+}
+.price-val sup { font-size:20px; vertical-align:top; margin-top:9px; display:inline-block; }
+.price-per { font-size:13px; color:var(--muted); margin-bottom:24px; }
+.price-div {
+  height:1px; margin-bottom:22px;
+  background:linear-gradient(90deg,transparent,var(--bord-h),transparent);
+}
+.price-feats { list-style:none; margin-bottom:28px; }
+.price-feats li {
+  font-size:13px; color:var(--muted);
+  padding:7px 0; display:flex; align-items:center; gap:9px;
+  border-bottom:1px solid rgba(201,168,76,.07);
+}
+html[lang="ar"] .price-feats li { font-size:12.5px; line-height:1.6; }
+.price-feats li::before { content:'◆'; font-size:7px; color:var(--gold); flex-shrink:0; }
+.price-btn {
+  display:block; text-align:center; padding:13px;
+  border-radius:5px; font-size:11.5px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase;
+  font-family:var(--font); transition:all .3s;
+}
+html[lang="ar"] .price-btn { letter-spacing:.04em; }
+.price-btn-out {
+  border:1px solid var(--bord-h); color:var(--white);
+}
+.price-btn-out:hover { border-color:var(--gold); background:rgba(201,168,76,.08); }
+.price-btn-fill {
+  background:linear-gradient(135deg,#C9A84C,#E8C96A); color:var(--black);
+}
+.price-btn-fill:hover { filter:brightness(1.08); }
+
+/* ═══════════════════════════════════════
+   PROCESS
+═══════════════════════════════════════ */
+.process-grid {
+  display:grid; grid-template-columns:1fr; gap:1px;
+  background:var(--border); border:1px solid var(--border);
+  border-radius:var(--r); overflow:hidden;
+}
+.step {
+  background:var(--dark-2); padding:28px 24px;
+}
+.step-n {
+  font-family:'Cinzel',serif;
+  font-size:44px; font-weight:900;
+  color:rgba(201,168,76,.10); line-height:1; margin-bottom:14px;
+}
+.step-t {
+  font-family:var(--font-d);
+  font-size:15px; font-weight:700; color:var(--white); margin-bottom:8px;
+}
+.step-d { font-size:13px; color:var(--muted); line-height:1.7; }
+html[lang="ar"] .step-d { font-size:12.5px; line-height:1.9; }
+
+/* ═══════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════ */
+.testi-grid {
+  display:grid; grid-template-columns:1fr; gap:16px;
+}
+.testi {
+  background:var(--dark-2); border:1px solid var(--border);
+  border-radius:10px; padding:28px 22px;
+  transition:border-color .3s;
+}
+.testi:hover { border-color:var(--bord-h); }
+.stars { color:var(--gold); font-size:13px; letter-spacing:3px; margin-bottom:16px; }
+.testi-txt {
+  font-size:14px; font-style:italic;
+  color:var(--white); line-height:1.68; margin-bottom:20px;
+}
+html[lang="ar"] .testi-txt { font-style:normal; font-size:13.5px; line-height:1.9; }
+.testi-auth { display:flex; align-items:center; gap:11px; }
+.testi-av {
+  width:38px; height:38px; border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-dk),var(--gold));
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:13px; color:var(--black); flex-shrink:0;
+}
+.testi-nm { font-size:13px; font-weight:600; color:var(--white); }
+.testi-bz { font-size:10.5px; color:var(--muted); letter-spacing:.04em; }
+
+/* ═══════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════ */
+.contact-wrap {
+  display:grid; grid-template-columns:1fr; gap:40px;
+}
+.contact-info-t {
+  font-family:var(--font-d);
+  font-size:22px; font-weight:700; color:var(--white); margin-bottom:14px;
+}
+html[lang="ar"] .contact-info-t { font-size:20px; letter-spacing:0; }
+.contact-info-s {
+  font-size:14px; color:var(--muted); line-height:1.75; margin-bottom:30px;
+}
+html[lang="ar"] .contact-info-s { font-size:13.5px; line-height:1.9; }
+.cd-item { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.cd-ic {
+  width:42px; height:42px; border-radius:7px;
+  border:1px solid var(--bord-h); background:rgba(201,168,76,.05);
+  display:flex; align-items:center; justify-content:center;
+  font-size:17px; flex-shrink:0;
+}
+.cd-lbl {
+  font-size:9px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--gold); display:block; margin-bottom:2px;
+}
+html[lang="ar"] .cd-lbl { letter-spacing:.04em; }
+.cd-val { font-size:13.5px; font-weight:500; color:var(--white); }
+
+/* Form */
+.form-g { margin-bottom:18px; }
+.form-lbl {
+  font-size:10px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--gold);
+  display:block; margin-bottom:7px;
+}
+html[lang="ar"] .form-lbl { letter-spacing:.04em; }
+.form-inp, .form-ta {
+  width:100%; background:var(--dark-3);
+  border:1px solid var(--border); border-radius:6px;
+  padding:13px 16px; font-size:14px;
+  font-family:var(--font); color:var(--white);
+  transition:border-color .3s; outline:none;
+  -webkit-appearance:none;
+}
+.form-inp:focus, .form-ta:focus { border-color:var(--gold); }
+.form-inp::placeholder, .form-ta::placeholder { color:rgba(245,242,236,.25); }
+.form-ta { resize:vertical; min-height:120px; }
+.form-btn {
+  width:100%;
+  background:linear-gradient(135deg,#C9A84C,#E8C96A); color:var(--black);
+  font-family:var(--font); font-size:12px; font-weight:800;
+  letter-spacing:.14em; text-transform:uppercase;
+  padding:15px; border-radius:5px; border:none;
+  cursor:pointer; transition:filter .3s, transform .2s;
+}
+html[lang="ar"] .form-btn { letter-spacing:.04em; }
+.form-btn:hover { filter:brightness(1.1); transform:translateY(-1px); }
+.form-btn:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+.form-msg {
+  display:none; padding:13px 16px; border-radius:6px;
+  font-size:13.5px; font-weight:600; text-align:center; margin-top:12px;
+}
+
+/* ═══════════════════════════════════════
+   CTA SECTION
+═══════════════════════════════════════ */
+#cta {
+  padding:80px 24px; text-align:center;
+  position:relative; overflow:hidden;
+}
+.cta-glow {
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:min(500px,90vw); height:250px;
+  background:radial-gradient(ellipse,rgba(201,168,76,.10),transparent 65%);
+  pointer-events:none;
+}
+.cta-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+.cta-title {
+  font-family:var(--font-d);
+  font-size:clamp(26px,7vw,54px);
+  font-weight:900; line-height:1.05; margin-bottom:16px;
+}
+html[lang="ar"] .cta-title { font-size:clamp(22px,6vw,46px); line-height:1.2; letter-spacing:0; }
+.cta-sub { font-size:15px; color:var(--muted); line-height:1.7; margin-bottom:36px; }
+html[lang="ar"] .cta-sub { font-size:14px; line-height:1.9; }
+.cta-btns {
+  display:flex; flex-direction:column;
+  align-items:center; gap:12px; margin-bottom:36px;
+}
+.cta-contacts {
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+  padding-top:28px; border-top:1px solid var(--border);
+}
+.cta-c {
+  display:flex; align-items:center; gap:7px;
+  font-size:13px; color:var(--muted);
+}
+.cta-c strong { color:var(--white); }
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+.sr-footer {
+  --sr-gold:#c9a24a; --sr-gold-bright:#e8c878;
+  --sr-line:rgba(201,162,74,0.18);
+  width:100%;
+  background:
+    radial-gradient(120% 140% at 50% -20%,rgba(201,162,74,0.10) 0%,rgba(201,162,74,0) 55%),
+    linear-gradient(180deg,#0a0c11 0%,#07090d 100%);
+  border-top:1px solid var(--sr-line);
+  padding:56px 24px 32px;
+  color:#cdd0d6;
+  position:relative; overflow:hidden;
+}
+.sr-footer::before {
+  content:""; position:absolute; top:-1px; left:50%; transform:translateX(-50%);
+  width:min(420px,70%); height:2px;
+  background:linear-gradient(90deg,transparent,var(--sr-gold),transparent);
+}
+.sr-footer__inner {
+  max-width:720px; margin:0 auto; text-align:center;
+  display:flex; flex-direction:column; align-items:center; gap:22px;
+}
+.sr-brand { display:flex; flex-direction:column; align-items:center; gap:12px; }
+.sr-mark { width:64px; height:72px; display:flex; align-items:center; justify-content:center; }
+.sr-mark svg { display:block; width:100%; height:100%; overflow:visible; }
+.sr-name {
+  font-family:'Cinzel',serif; font-size:28px; font-weight:700;
+  letter-spacing:1.5px; line-height:1; color:#f4f1ea;
+}
+.sr-name b { color:var(--sr-gold-bright); font-weight:700; }
+.sr-tag { font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--sr-gold); font-family:'Outfit',sans-serif; }
+.sr-social { display:flex; gap:16px; align-items:center; }
+.sr-social a {
+  --brand:var(--sr-gold); width:48px; height:48px; border-radius:50%;
+  display:grid; place-items:center;
+  border:1px solid var(--sr-line); background:rgba(255,255,255,0.02);
+  color:var(--sr-gold-bright);
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,background .35s,box-shadow .35s,color .35s;
+}
+.sr-social a svg { width:21px; height:21px; fill:currentColor; transition:fill .35s; }
+.sr-social a:hover {
+  transform:translateY(-5px); border-color:var(--brand); color:#fff;
+  background:var(--brand);
+  box-shadow:0 10px 26px -8px rgba(0,0,0,0.6),0 0 0 3px rgba(201,162,74,0.10);
+}
+.sr-social .sr-wa { --brand:#25D366; }
+.sr-social .sr-fb { --brand:#1877F2; }
+.sr-social .sr-ig:hover {
+  background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+  border-color:#d62976;
+}
+.sr-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; }
+.sr-links a {
+  color:#b6bac2; text-decoration:none; font-size:13.5px;
+  letter-spacing:1px; text-transform:uppercase; position:relative; transition:color .3s;
+}
+.sr-links a::after {
+  content:""; position:absolute; left:0; bottom:-5px;
+  width:0; height:1px; background:var(--sr-gold); transition:width .3s;
+}
+.sr-links a:hover { color:var(--sr-gold-bright); }
+.sr-links a:hover::after { width:100%; }
+.sr-divider { width:100%; max-width:560px; height:1px;
+  background:linear-gradient(90deg,transparent,var(--sr-line),transparent); }
+.sr-copy { font-size:12.5px; color:#6f747e; letter-spacing:0.6px; line-height:1.7; }
+.sr-copy a { color:var(--sr-gold); text-decoration:none; }
+.sr-copy a:hover { color:var(--sr-gold-bright); }
+
+/* ═══════════════════════════════════════
+   CONTACT MODAL
+═══════════════════════════════════════ */
+#modal {
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,.78); backdrop-filter:blur(10px);
+  z-index:9000; align-items:center; justify-content:center; padding:20px;
+}
+#modal.open { display:flex; }
+.modal-box {
+  background:var(--dark-2); border:1px solid var(--bord-h);
+  border-radius:12px; padding:36px 28px;
+  max-width:400px; width:100%; text-align:center;
+  position:relative;
+}
+.modal-close {
+  position:absolute; top:14px; right:14px;
+  width:30px; height:30px; border-radius:50%;
+  background:rgba(255,255,255,.08);
+  color:var(--white); font-size:16px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+}
+.modal-ic { font-size:34px; margin-bottom:14px; }
+.modal-t {
+  font-family:var(--font-d); font-size:18px; font-weight:700;
+  color:var(--white); margin-bottom:8px;
+}
+.modal-s { font-size:13px; color:var(--muted); margin-bottom:24px; line-height:1.6; }
+.modal-row {
+  background:var(--dark-3); border:1px solid var(--border);
+  border-radius:7px; padding:12px 16px; margin-bottom:10px;
+}
+.modal-lbl {
+  font-size:9px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--gold);
+  display:block; margin-bottom:5px;
+}
+.modal-val {
+  font-size:15px; font-weight:700;
+  color:var(--white); font-family:monospace;
+  word-break:break-all;
+}
+
+/* ═══════════════════════════════════════
+   TABLET — 640px+
+═══════════════════════════════════════ */
+@media (min-width:640px) {
+  .section { padding:80px 36px; }
+  #cta { padding:100px 36px; }
+  .hero-ctas { flex-direction:row; }
+  .btn-gold, .btn-outline { width:auto; }
+  .cta-btns { flex-direction:row; justify-content:center; }
+  .hero-stats { grid-template-columns:repeat(4,1fr); }
+  .svc-grid { grid-template-columns:repeat(2,1fr); }
+  .ind-grid { grid-template-columns:repeat(3,1fr); }
+  .port-grid { grid-template-columns:repeat(2,1fr); }
+  .price-grid { grid-template-columns:1fr 1fr; }
+  .testi-grid { grid-template-columns:1fr 1fr; }
+  .cta-contacts { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:20px; }
+  footer { flex-direction:row; justify-content:space-between; text-align:left; }
+  html[lang="ar"] footer { text-align:right; }
+  .process-grid { grid-template-columns:repeat(2,1fr); }
+  .contact-wrap { grid-template-columns:1fr 1fr; }
+}
+
+/* ═══════════════════════════════════════
+   DESKTOP — 1024px+
+═══════════════════════════════════════ */
+@media (min-width:1024px) {
+  #nav { padding:20px 56px; }
+  #nav.scrolled { padding:13px 56px; }
+  .nav-links-desk { display:flex; }
+  .hamburger { display:none; }
+  #hero {
+    flex-direction:row; text-align:left;
+    justify-content:flex-start; padding:120px 56px 80px;
+    min-height:100vh;
+  }
+  html[lang="ar"] #hero { text-align:right; }
+  .hero-inner { max-width:600px; }
+  .hero-ctas { justify-content:flex-start; }
+  html[lang="ar"] .hero-ctas { justify-content:flex-end; }
+  .hero-stats { border-top:1px solid var(--border); }
+  .hero-badge { margin:0 0 32px; }
+  /* Hero visual — desktop only */
+  .hero-visual-wrap {
+    position:absolute; right:56px; top:50%; transform:translateY(-50%);
+    width:320px; z-index:3;
+    animation:fadeRight 1s ease .3s both;
+    display:block !important;
+  }
+  html[lang="ar"] .hero-visual-wrap {
+    right:auto; left:56px;
+    animation:fadeLeft 1s ease .3s both;
+  }
+  @keyframes fadeRight { from{opacity:0;transform:translateX(30px) translateY(-50%)} to{opacity:1;transform:translateX(0) translateY(-50%)} }
+  @keyframes fadeLeft  { from{opacity:0;transform:translateX(-30px) translateY(-50%)} to{opacity:1;transform:translateX(0) translateY(-50%)} }
+  .section { padding:110px 56px; }
+  #cta { padding:130px 56px; }
+  .svc-grid { grid-template-columns:repeat(3,1fr); }
+  .ind-grid { grid-template-columns:repeat(4,1fr); }
+  .port-grid { grid-template-columns:repeat(3,1fr); }
+  .price-grid { grid-template-columns:repeat(3,1fr); }
+  .testi-grid { grid-template-columns:repeat(3,1fr); }
+  .process-grid { grid-template-columns:repeat(4,1fr); }
+  .contact-wrap { gap:72px; }
+  .eyebrow { margin-bottom:16px; }
+  .sec-sub { margin-bottom:56px; }
+}
+
+/* Hero visual — hidden on mobile/tablet by default */
+.hero-visual-wrap { display:none; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
+
+/* ═══════════════════════════════════
+   PORTFOLIO LIBRARY
+═══════════════════════════════════ */
+.port-filters {
+  display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px;
+}
+.pf-btn {
+  padding:7px 16px; border-radius:30px;
+  font-size:11px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); border:1px solid var(--border);
+  background:transparent; transition:all .3s; cursor:pointer;
+  font-family:var(--font);
+}
+html[lang="ar"] .pf-btn { letter-spacing:.04em; }
+.pf-btn:hover { color:var(--white); border-color:var(--bord-h); }
+.pf-btn.active { background:var(--gold); color:var(--black); border-color:var(--gold); }
+
+.port-lib-grid {
+  display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:40px;
+}
+.plib-card {
+  border:1px solid var(--border); border-radius:10px;
+  overflow:hidden; background:var(--dark-2);
+  transition:transform .3s, border-color .3s, box-shadow .3s;
+}
+.plib-card:hover {
+  transform:translateY(-4px);
+  border-color:var(--bord-h);
+  box-shadow:0 16px 40px rgba(201,168,76,.10);
+}
+.plib-card.hidden { display:none; }
+
+.plib-prev {
+  height:200px; display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden; cursor:pointer;
+}
+.plib-prev img.port-img {
+  width:100%; height:100%; object-fit:cover; display:block;
+  transition:transform .4s ease;
+}
+.plib-card:hover .plib-prev img.port-img { transform:scale(1.05); }
+.plib-glow { position:absolute; inset:0; opacity:.18; }
+.plib-emoji { font-size:48px; position:relative; z-index:1; }
+.plib-overlay {
+  position:absolute; inset:0; z-index:2;
+  background:rgba(4,5,10,.72);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .3s;
+}
+.plib-card:hover .plib-overlay { opacity:1; }
+.plib-view {
+  font-size:11px; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gold);
+  border:1px solid var(--gold); border-radius:4px;
+  padding:7px 16px;
+}
+html[lang="ar"] .plib-view { letter-spacing:.04em; }
+
+.plib-info { padding:18px 20px; }
+.plib-cats { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:8px; }
+.plib-tag {
+  font-size:9px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold); border:1px solid rgba(201,168,76,.25);
+  border-radius:30px; padding:3px 9px;
+  background:rgba(201,168,76,.05);
+}
+html[lang="ar"] .plib-tag { letter-spacing:.04em; }
+.plib-title {
+  font-family:var(--font-d);
+  font-size:15px; font-weight:700; color:var(--white); margin-bottom:7px;
+}
+html[lang="ar"] .plib-title { font-size:14px; letter-spacing:0; }
+.plib-desc { font-size:12.5px; color:var(--muted); line-height:1.65; }
+html[lang="ar"] .plib-desc { font-size:12px; line-height:1.85; }
+
+.port-lib-cta {
+  text-align:center; padding:28px;
+  background:rgba(201,168,76,.04); border:1px solid var(--border);
+  border-radius:10px;
+}
+.port-lib-cta p {
+  font-size:15px; color:var(--muted); margin-bottom:18px;
+}
+html[lang="ar"] .port-lib-cta p { font-size:14.5px; }
+
+@media (min-width:640px) {
+  .port-lib-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media (min-width:1024px) {
+  .port-lib-grid { grid-template-columns:repeat(3,1fr); }
+  .plib-prev { height:170px; }
+}
+
 </style>
+  <!-- Google Fonts — single optimised load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cairo:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="../index.html" class="nav-logo">Sanose Rabih</a>
-  <ul class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="index.html" class="active">Blog</a>
-    <a href="../index.html#services">Services</a>
-    <a href="../index.html#contact">Contact</a>
-  </ul>
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <svg class="sr-hex" width="32" height="37" viewBox="0 0 140 161" fill="none">
+      <defs><linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f5e17a"/><stop offset="50%" stop-color="#d4af37"/><stop offset="100%" stop-color="#b8952e"/></linearGradient></defs>
+      <polygon points="70,6 132,39 132,122 70,155 8,122 8,39" fill="rgba(212,175,55,0.07)" stroke="url(#ng)" stroke-width="4"/>
+      <polygon points="70,19 118,47 118,114 70,142 22,114 22,47" fill="none" stroke="rgba(160,130,30,0.35)" stroke-width="1.5"/>
+      <circle cx="70" cy="6" r="5" fill="#d4af37"/><circle cx="132" cy="39" r="5" fill="#d4af37"/>
+      <circle cx="132" cy="122" r="5" fill="#d4af37"/><circle cx="70" cy="155" r="5" fill="#d4af37"/>
+      <circle cx="8" cy="122" r="5" fill="#d4af37"/><circle cx="8" cy="39" r="5" fill="#d4af37"/>
+      <text x="70" y="102" text-anchor="middle" font-family="serif" font-size="50" font-weight="900" fill="#d4af37" letter-spacing="3">SR</text>
+    </svg>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Sanose <span class="gold">Rabih</span></div>
+      <span class="nav-logo-sub" data-en="AI Marketing Specialist" data-ar="متخصِّص التسويق الرقمي">AI Marketing Specialist</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links-desk">
+      <li><a href="#services" data-en="Services"   data-ar="الخدمات">Services</a></li>
+      <li><a href="#about"    data-en="About"      data-ar="من أنا">About</a></li>
+      <li><a href="#portfolio" data-en="Portfolio"  data-ar="أعمالنا">Portfolio</a></li>
+      <li><a href="#pricing"  data-en="Pricing"    data-ar="الأسعار">Pricing</a></li>
+      <li><a href="#faq"      data-en="FAQ"        data-ar="أسئلة">FAQ</a></li>
+      <li><a href="#contact"  data-en="Contact"    data-ar="تواصل">Contact</a></li>
+      <li><a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a></li>
+      <li><a href="/audit.html" data-en="Free Audit" data-ar="تحليل مجاني" style="color:var(--gold);font-weight:600;">Free Audit</a></li>
+      <li><a href="#cta" class="nav-cta-btn" data-en="Free Sample" data-ar="عيّنة مجانية">Free Sample</a></li>
+    </ul>
+    <div class="lang-sw">
+      <button onclick="setLang('en')" id="lbEN" class="on">EN</button>
+      <button onclick="setLang('ar')" id="lbAR">عربي</button>
+    </div>
+    <button class="hamburger" id="ham" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
+<!-- ═══ MOBILE MENU ═══ -->
+<div id="mob-menu">
+  <a href="#services"  onclick="closeMenu()" data-en="Services"   data-ar="الخدمات">Services</a>
+  <a href="#about"     onclick="closeMenu()" data-en="About"      data-ar="من أنا">About</a>
+  <a href="#portfolio" onclick="closeMenu()" data-en="Portfolio"  data-ar="أعمالنا">Portfolio</a>
+  <a href="#pricing"   onclick="closeMenu()" data-en="Pricing"    data-ar="الأسعار">Pricing</a>
+  <a href="#faq"       onclick="closeMenu()" data-en="FAQ"        data-ar="أسئلة">FAQ</a>
+  <a href="#contact"   onclick="closeMenu()" data-en="Contact"    data-ar="تواصل">Contact</a>
+  <a href="/blog/" onclick="closeMenu()" data-en="Blog" data-ar="المدونة">Blog</a>
+  <a href="#cta" class="mob-cta" onclick="closeMenu()" data-en="✦ Free Sample" data-ar="✦ عيّنة مجانية">✦ Free Sample</a>
+  <div class="mob-menu-lang">
+    <button onclick="setLang('en');closeMenu()" id="mlEN" class="on">EN</button>
+    <button onclick="setLang('ar');closeMenu()" id="mlAR">عربي</button>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="hero-grid"></div>
+
   <div class="hero-inner">
-    <div class="hero-eyebrow">Weekly Blog</div>
-    <h1>Digital Marketing &amp;<br><em>AI Insights</em></h1>
-    <p class="hero-sub">Data-backed articles for small business owners published every Saturday — from digital marketing fundamentals to AI-powered growth strategies.</p>
+    <div class="hero-badge">
+      <div class="bdot"></div>
+      <span data-en="AI-Powered Marketing for Small Businesses" data-ar="تسويق رقمي بالذكاء الاصطناعي للشركات الصغيرة">AI-Powered Marketing for Small Businesses</span>
+    </div>
 
-    <div class="progress-block">
+    <h1 class="hero-title">
+      <span data-en="Content That" data-ar="محتوى">Content That</span><br>
+      <span class="t2" data-en="Converts." data-ar="يُحوِّل.">Converts.</span><br>
+      <span data-en="Marketing That Works." data-ar="تسويق يُحقِّق النتائج.">Marketing That Works.</span>
+    </h1>
+
+    <p class="hero-sub"
+      data-en="Professional social media content, brand design &amp; digital marketing powered by <b>Artificial Intelligence</b> — helping businesses across the USA grow online."
+      data-ar="محتوى احترافي لوسائل التواصل الاجتماعي، وتصميم هوية بصرية، وتسويق رقمي مدعوم بـ<b>الذكاء الاصطناعي</b> — يُساعد الشركات على تنمية حضورها الإلكتروني.">
+      Professional social media content, brand design &amp; digital marketing powered by <b>Artificial Intelligence</b> — helping businesses across the USA grow online.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#" onclick="openModal();return false;" class="btn-gold" data-en="✦ Get Free Sample" data-ar="✦ احصل على عيّنة مجانية">✦ Get Free Sample</a>
+      <a href="#services" class="btn-outline" data-en="Explore Services →" data-ar="← استكشف الخدمات">Explore Services →</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">🚀</span><span class="stat-lbl" data-en="Now Launching" data-ar="إطلاق الآن">Now Launching</span></div>
+      <div class="stat"><span class="stat-n">10</span><span class="stat-lbl" data-en="Industries" data-ar="قطاعاً">Industries</span></div>
+      <div class="stat"><span class="stat-n">$75</span><span class="stat-lbl" data-en="From / Month" data-ar="يبدأ من / شهرياً">From / Month</span></div>
+      <div class="stat"><span class="stat-n" data-en="EN+AR" data-ar="ع + ع">EN+AR</span><span class="stat-lbl" data-en="Bilingual" data-ar="ثنائي اللغة">Bilingual</span></div>
+    </div>
+  </div>
+
+  <!-- Desktop-only hex visual -->
+  <div class="hero-visual-wrap">
+    <svg viewBox="0 0 300 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hv" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f5e17a" stop-opacity="0.5"/><stop offset="50%" stop-color="#d4af37" stop-opacity="0.32"/><stop offset="100%" stop-color="#b8952e" stop-opacity="0.15"/></linearGradient>
+        <linearGradient id="hv2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f5e17a"/><stop offset="50%" stop-color="#d4af37"/><stop offset="100%" stop-color="#b8952e"/></linearGradient>
+      </defs>
+      <polygon points="150,8 284,84 284,261 150,337 16,261 16,84" fill="none" stroke="url(#hv)" stroke-width="1" opacity="0.35"/>
+      <polygon points="150,20 268,88 268,253 150,321 32,253 32,88" fill="rgba(212,175,55,0.04)" stroke="url(#hv2)" stroke-width="2.5"/>
+      <polygon points="150,44 244,99 244,230 150,285 56,230 56,99" fill="none" stroke="rgba(160,130,30,0.20)" stroke-width="1.5"/>
+      <circle cx="150" cy="20" r="6" fill="#d4af37" opacity="0.8"/><circle cx="268" cy="88" r="6" fill="#d4af37" opacity="0.8"/>
+      <circle cx="268" cy="253" r="6" fill="#d4af37" opacity="0.8"/><circle cx="150" cy="321" r="6" fill="#d4af37" opacity="0.8"/>
+      <circle cx="32" cy="253" r="6" fill="#d4af37" opacity="0.8"/><circle cx="32" cy="88" r="6" fill="#d4af37" opacity="0.8"/>
+      <text x="150" y="210" text-anchor="middle" font-family="serif" font-size="110" font-weight="900" fill="url(#hv2)" opacity="0.45" letter-spacing="8">SR</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services" class="section section-dark">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="What I Offer" data-ar="ما أُقدِّمه">What I Offer</div></div>
+  <h2 class="sec-title reveal"><span data-en="Professional " data-ar="خدمات ">Professional </span><span class="gold" data-en="Services" data-ar="احترافية">Services</span></h2>
+  <p class="sec-sub reveal" data-en="Everything your business needs to dominate social media and attract customers online." data-ar="كلّ ما تحتاجه شركتك للتميّز على وسائل التواصل الاجتماعي وجذب العملاء إلكترونياً.">Everything your business needs to dominate social media and attract customers online.</p>
+
+  <div class="svc-grid reveal">
+    <div class="svc-card">
+      <div class="svc-icon">✦</div>
+      <div class="svc-title" data-en="Social Media Content" data-ar="محتوى وسائل التواصل">Social Media Content</div>
+      <p class="svc-desc" data-en="Professional posts designed to attract, engage and convert your audience on Facebook, Instagram &amp; WhatsApp." data-ar="منشورات احترافية مصمَّمة لجذب جمهورك وتحويله على فيسبوك وإنستغرام وواتساب.">Professional posts designed to attract, engage and convert your audience on Facebook, Instagram &amp; WhatsApp.</p>
+      <div class="tags"><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">WhatsApp</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">◈</div>
+      <div class="svc-title" data-en="Brand Identity Design" data-ar="تصميم الهوية البصرية">Brand Identity Design</div>
+      <p class="svc-desc" data-en="Complete visual identity: logos, business cards, banners and brand guidelines tailored to your industry." data-ar="هويّة بصرية متكاملة: الشعار وبطاقات الأعمال والبنرات وفق طبيعة قطاعك.">Complete visual identity: logos, business cards, banners and brand guidelines tailored to your industry.</p>
+      <div class="tags"><span class="tag" data-en="Logo" data-ar="شعار">Logo</span><span class="tag" data-en="Cards" data-ar="بطاقات">Cards</span><span class="tag" data-en="Banners" data-ar="بنرات">Banners</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">▸</div>
+      <div class="svc-title" data-en="Video Translation &amp; Dubbing" data-ar="ترجمة الفيديو والدبلجة">Video Translation &amp; Dubbing</div>
+      <p class="svc-desc" data-en="Transform English videos into professional Arabic content with AI translation, subtitles and voice-over." data-ar="تحويل مقاطع الفيديو الإنجليزية إلى محتوى عربي احترافي مع ترجمة ذكية وتعليق صوتي.">Transform English videos into professional Arabic content with AI translation, subtitles and voice-over.</p>
+      <div class="tags"><span class="tag" data-en="Arabic" data-ar="عربي">Arabic</span><span class="tag" data-en="AI Voice" data-ar="صوت ذكي">AI Voice</span><span class="tag">Subtitles</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">⬡</div>
+      <div class="svc-title" data-en="Copywriting &amp; Scripts" data-ar="كتابة الإعلانات والنصوص">Copywriting &amp; Scripts</div>
+      <p class="svc-desc" data-en="Compelling ad copy, product descriptions and video scripts in English and Arabic that drive real results." data-ar="نصوص إعلانية مُقنعة وأوصاف منتجات وسكريبتات فيديو بالعربية والإنجليزية تُحقِّق نتائج فعلية.">Compelling ad copy, product descriptions and video scripts in English and Arabic that drive real results.</p>
+      <div class="tags"><span class="tag" data-en="Ad Copy" data-ar="نصوص">Ad Copy</span><span class="tag" data-en="Scripts" data-ar="سكريبت">Scripts</span><span class="tag" data-en="Bilingual" data-ar="ثنائي اللغة">Bilingual</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">⚖️</div>
+      <div class="svc-title" data-en="Legal Marketing" data-ar="التسويق القانوني">Legal Marketing</div>
+      <p class="svc-desc" data-en="Specialized digital marketing for law firms and attorneys — attracting Arabic &amp; English-speaking clients with professional content." data-ar="تسويق رقمي متخصِّص لمكاتب المحاماة والمحامين — لاستقطاب العملاء الناطقين بالعربية والإنجليزية بمحتوى احترافي رصين.">Specialized digital marketing for law firms and attorneys — attracting Arabic &amp; English-speaking clients.</p>
+      <div class="tags"><span class="tag" data-en="Law Firms" data-ar="محاماة">Law Firms</span><span class="tag" data-en="Immigration" data-ar="هجرة">Immigration</span><span class="tag" data-en="Bilingual" data-ar="ثنائي اللغة">Bilingual</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">◇</div>
+      <div class="svc-title" data-en="AI-Powered Strategy" data-ar="استراتيجية بالذكاء الاصطناعي">AI-Powered Strategy</div>
+      <p class="svc-desc" data-en="Data-driven marketing strategy using the latest AI tools to maximize your ROI and accelerate business growth." data-ar="استراتيجية تسويقية مبنيّة على البيانات بأحدث أدوات الذكاء الاصطناعي لتعظيم عائد الاستثمار.">Data-driven marketing strategy using the latest AI tools to maximize your ROI and accelerate growth.</p>
+      <div class="tags"><span class="tag" data-en="Strategy" data-ar="استراتيجية">Strategy</span><span class="tag" data-en="Analytics" data-ar="تحليلات">Analytics</span><span class="tag" data-en="Growth" data-ar="نموّ">Growth</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRIES ═══ -->
+<section id="industries" class="section">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="Specialized In" data-ar="متخصِّص في">Specialized In</div></div>
+  <h2 class="sec-title reveal"><span data-en="Industries " data-ar="القطاعات التي ">Industries </span><span class="gold" data-en="We Serve" data-ar="نخدمها">We Serve</span></h2>
+  <p class="sec-sub reveal" data-en="Specialized content strategies for every sector of the American market." data-ar="استراتيجيات محتوى متخصِّصة لكلّ قطاع في السوق الأمريكية.">Specialized content strategies for every sector of the American market.</p>
+  <div class="ind-grid reveal">
+    <div class="ind-card"><div class="ind-ic">🍽️</div><div class="ind-nm" data-en="Halal Restaurants" data-ar="مطاعم الحلال">Halal Restaurants</div></div>
+    <div class="ind-card"><div class="ind-ic">🛒</div><div class="ind-nm" data-en="Halal Markets" data-ar="أسواق الحلال">Halal Markets</div></div>
+    <div class="ind-card"><div class="ind-ic">🛡️</div><div class="ind-nm" data-en="Security Services" data-ar="خدمات الأمن">Security Services</div></div>
+    <div class="ind-card"><div class="ind-ic">⚕️</div><div class="ind-nm" data-en="Medical Clinics" data-ar="العيادات الطبية">Medical Clinics</div></div>
+    <div class="ind-card"><div class="ind-ic">⚖️</div><div class="ind-nm" data-en="Legal Services" data-ar="الخدمات القانونية">Legal Services</div></div>
+    <div class="ind-card"><div class="ind-ic">📚</div><div class="ind-nm" data-en="Education" data-ar="التعليم">Education</div></div>
+    <div class="ind-card"><div class="ind-ic">🚗</div><div class="ind-nm" data-en="Auto Services" data-ar="خدمات السيارات">Auto Services</div></div>
+    <div class="ind-card"><div class="ind-ic">🧹</div><div class="ind-nm" data-en="Cleaning Services" data-ar="خدمات التنظيف">Cleaning Services</div></div>
+    <div class="ind-card"><div class="ind-ic">🛍️</div><div class="ind-nm" data-en="Fashion &amp; Beauty" data-ar="الأزياء والجمال">Fashion &amp; Beauty</div></div>
+    <div class="ind-card"><div class="ind-ic">💰</div><div class="ind-nm" data-en="Financial Services" data-ar="الخدمات المالية">Financial Services</div></div>
+    <div class="ind-card"><div class="ind-ic">🏪</div><div class="ind-nm" data-en="Retail &amp; Shops" data-ar="متاجر التجزئة">Retail &amp; Shops</div></div>
+    <div class="ind-card"><div class="ind-ic">🏠</div><div class="ind-nm" data-en="Real Estate" data-ar="العقارات">Real Estate</div></div>
+    <div class="ind-card"><div class="ind-ic">🏗️</div><div class="ind-nm" data-en="Construction" data-ar="البناء والإنشاء">Construction</div></div>
+    <div class="ind-card"><div class="ind-ic">🌍</div><div class="ind-nm" data-en="Travel Agency" data-ar="وكالات السفر">Travel Agency</div></div>
+    <div class="ind-card"><div class="ind-ic">💪</div><div class="ind-nm" data-en="Gym &amp; Fitness" data-ar="الصالات الرياضية">Gym &amp; Fitness</div></div>
+    <div class="ind-card"><div class="ind-ic">📱</div><div class="ind-nm" data-en="Electronics" data-ar="الإلكترونيات">Electronics</div></div>
+    <div class="ind-card"><div class="ind-ic">🧾</div><div class="ind-nm" data-en="Tax &amp; Accounting" data-ar="الضرائب والمحاسبة">Tax &amp; Accounting</div></div>
+    <div class="ind-card"><div class="ind-ic">🚛</div><div class="ind-nm" data-en="Transportation" data-ar="النقل والمواصلات">Transportation</div></div>
+    <div class="ind-card"><div class="ind-ic">📦</div><div class="ind-nm" data-en="Shipping &amp; Freight" data-ar="الشحن والبضائع">Shipping &amp; Freight</div></div>
+    <div class="ind-card"><div class="ind-ic">🦷</div><div class="ind-nm" data-en="Dental Care" data-ar="طب الأسنان">Dental Care</div></div>
+  </div>
+</section>
+
+<!-- ═══ PORTFOLIO LIBRARY ═══ -->
+
+<!-- ══════════════════════════════════════ -->
+<!-- ABOUT SECTION                          -->
+<!-- ══════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="About Me" data-ar="من أنا">About Me</div></div>
+  <h2 class="sec-title reveal">
+    <span data-en="The Person " data-ar="الشخص ">The Person </span>
+    <span class="gold" data-en="Behind the Brand" data-ar="خلف العلامة">Behind the Brand</span>
+  </h2>
+  <p class="sec-sub reveal" data-en="Founder · AI Marketing Specialist · Sacramento, CA" data-ar="المؤسس · متخصِّص التسويق بالذكاء الاصطناعي · سكرامنتو، كاليفورنيا">Founder · AI Marketing Specialist · Sacramento, CA</p>
+
+  <style>
+    
+    /* Profile photo */
+    .bio-photo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .bio-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+      flex-shrink: 0;
+    }
+    .bio-name-block { display: flex; flex-direction: column; }
+
+    .about-new-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      
+    /* Profile photo */
+    .bio-photo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .bio-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+      flex-shrink: 0;
+    }
+    .bio-name-block { display: flex; flex-direction: column; }
+
+    .about-new-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .bio-main-card {
+        grid-column: 1;
+        grid-row: 1 / 3;
+      }
+    }
+    .bio-main-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.22);
+      border-radius: 16px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bio-main-card::before {
+      content:'';
+      position:absolute;
+      top:0;left:0;right:0;
+      height:2px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+    }
+    .bio-person-name {
+      font-family:'Cinzel',serif;
+      font-size:20px;
+      font-weight:700;
+      color:var(--cream);
+      margin-bottom:4px;
+    }
+    .bio-person-role {
+      font-size:11px;
+      letter-spacing:2.5px;
+      text-transform:uppercase;
+      color:var(--gold);
+      margin-bottom:22px;
+      font-weight:500;
+    }
+    .bio-divider-line {
+      width:36px;height:1px;
+      background:rgba(212,175,55,0.25);
+      margin-bottom:22px;
+    }
+    .bio-body-text {
+      font-size:14.5px;
+      line-height:1.9;
+      color:var(--muted);
+      font-weight:300;
+    }
+    .bio-body-text p + p { margin-top:13px; }
+    .bio-body-text strong { color:rgba(212,175,55,0.85); font-weight:500; }
+    .about-trait-card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(212,175,55,0.22);
+      border-radius:14px;
+      padding:24px 22px;
+      transition:border-color .3s,background .3s;
+      position:relative;
+      overflow:hidden;
+    }
+    .about-trait-card:hover {
+      border-color:rgba(212,175,55,0.45);
+      background:rgba(255,255,255,0.05);
+    }
+    .about-trait-card::after {
+      content:'';
+      position:absolute;
+      bottom:0;right:0;
+      width:60px;height:60px;
+      background:radial-gradient(circle at bottom right,rgba(212,175,55,0.07),transparent 70%);
+    }
+    .trait-ic  { font-size:24px; margin-bottom:12px; display:block; }
+    .trait-lbl {
+      font-family:'Cinzel',serif;
+      font-size:11px;font-weight:700;
+      color:var(--gold);letter-spacing:1.5px;
+      text-transform:uppercase;margin-bottom:7px;
+    }
+    .trait-dsc { font-size:13px; color:var(--muted); line-height:1.6; font-weight:300; }
+    .about-values-bar {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(212,175,55,0.22);
+      border-radius:14px;
+      padding:22px 28px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      position:relative;
+      overflow:hidden;
+      margin-top:0;
+    }
+    @media (min-width:600px) {
+      .about-values-bar {
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+      }
+      .aval-item + .aval-item {
+        padding-left:20px;
+        border-left:1px solid rgba(212,175,55,0.18);
+        border-top:none;
+        padding-top:0;
+      }
+    }
+    .about-values-bar::before {
+      content:'';
+      position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    }
+    .aval-item {
+      display:flex;align-items:center;gap:12px;flex:1;
+    }
+    .aval-item + .aval-item {
+      padding-top:16px;
+      border-top:1px solid rgba(212,175,55,0.15);
+    }
+    .aval-dot {
+      width:7px;height:7px;border-radius:50%;
+      background:var(--gold);flex-shrink:0;
+    }
+    .aval-strong {
+      font-size:13px;color:var(--cream);
+      font-weight:500;margin-bottom:2px;
+    }
+    .aval-sub {
+      font-size:11px;letter-spacing:1px;
+      text-transform:uppercase;color:var(--muted);
+    }
+  </style>
+
+  <div class="about-new-grid reveal">
+
+    <!-- Bio Card -->
+    <div class="bio-main-card">
+      <div class="bio-photo-wrap">
+        <img src="profile.jpeg" alt="Sanose Rabih — AI Marketing Specialist" class="bio-photo" loading="lazy">
+        <div class="bio-name-block">
+          <div class="bio-person-name">Sanose Rabih</div>
+          <div class="bio-person-role" data-en="AI Marketing Specialist" data-ar="متخصِّص التسويق بالذكاء الاصطناعي">AI Marketing Specialist</div>
+        </div>
+      </div>
+      <div class="bio-divider-line"></div>
+      <div class="bio-body-text">
+        <p data-en="I'm Sanose Rabih, founder of <strong>Sanose Rabih | AI Marketing</strong> — helping small business owners and entrepreneurs build a stronger, more visible brand through professional, AI-powered marketing content." data-ar="أنا سنوسي رابح، مؤسس <strong>Sanose Rabih | AI Marketing</strong> — أساعد أصحاب الأعمال الصغيرة ورواد الأعمال على بناء علامة تجارية أقوى وأكثر وضوحاً من خلال محتوى تسويقي احترافي مدعوم بالذكاء الاصطناعي.">I'm Sanose Rabih, founder of <strong>Sanose Rabih | AI Marketing</strong> — helping small business owners and entrepreneurs build a stronger, more visible brand through professional, AI-powered marketing content.</p>
+        <p data-en="My work is built on one belief: great content should do more than look good — it should attract the right audience, build trust, and move your business forward." data-ar="عملي مبنيٌّ على قناعة واحدة: المحتوى الجيد يجب أن يفعل أكثر من مجرد أن يبدو جميلاً — يجب أن يجذب الجمهور المناسب ويبني الثقة ويدفع عملك للأمام.">My work is built on one belief: great content should do more than look good — it should attract the right audience, build trust, and move your business forward.</p>
+        <p data-en="I work with business owners across the United States and internationally, across different industries and backgrounds, creating content that speaks clearly to their market and represents their brand with confidence." data-ar="أعمل مع أصحاب الأعمال في جميع أنحاء الولايات المتحدة وعلى المستوى الدولي، عبر مختلف القطاعات والخلفيات، لإنشاء محتوى يتحدث بوضوح إلى سوقهم ويمثّل علامتهم التجارية بثقة.">I work with business owners across the United States and internationally, across different industries and backgrounds, creating content that speaks clearly to their market and represents their brand with confidence.</p>
+        <p data-en="With a background in Law, I bring precision, attention to detail, and clear communication that goes beyond design — it's built into every project I deliver." data-ar="بخلفيتي في القانون، أُضفي دقةً واهتماماً بالتفاصيل وتواصلاً واضحاً يتجاوز التصميم — إنه متجذِّر في كل مشروع أُسلِّمه.">With a background in Law, I bring precision, attention to detail, and clear communication that goes beyond design — it's built into every project I deliver.</p>
+        <p data-en="Whether you're launching, growing, or repositioning your business — I'm here to help you show up professionally and consistently, with content that actually works." data-ar="سواء كنت تطلق عملك أو تنمّيه أو تعيد تموضعه — أنا هنا لمساعدتك على الظهور باحترافية واتساق، بمحتوى يؤدي نتائج حقيقية.">Whether you're launching, growing, or repositioning your business — I'm here to help you show up professionally and consistently, with content that actually works.</p>
+      </div>
+    </div>
+
+    <!-- Trait 1 -->
+    <div class="about-trait-card">
+      <span class="trait-ic">🌍</span>
+      <div class="trait-lbl" data-en="Global Reach" data-ar="وصول عالمي">Global Reach</div>
+      <div class="trait-dsc" data-en="Serving clients across the USA and internationally — every industry, every background." data-ar="أخدم عملاء في جميع أنحاء الولايات المتحدة وعلى المستوى الدولي — كل القطاعات وكل الخلفيات.">Serving clients across the USA and internationally — every industry, every background.</div>
+    </div>
+
+    <!-- Trait 2 -->
+    <div class="about-trait-card">
+      <span class="trait-ic">🤖</span>
+      <div class="trait-lbl" data-en="AI-Powered" data-ar="مدعوم بالذكاء الاصطناعي">AI-Powered</div>
+      <div class="trait-dsc" data-en="Modern AI tools combined with human creativity and marketing strategy for real results." data-ar="أدوات الذكاء الاصطناعي الحديثة مع الإبداع البشري واستراتيجية التسويق لنتائج حقيقية.">Modern AI tools combined with human creativity and marketing strategy for real results.</div>
+    </div>
+
+    <!-- Trait 3 -->
+    <div class="about-trait-card">
+      <span class="trait-ic">⚖️</span>
+      <div class="trait-lbl" data-en="Law Background" data-ar="خلفية قانونية">Law Background</div>
+      <div class="trait-dsc" data-en="Precision, attention to detail, and clear communication built into every project." data-ar="الدقة والاهتمام بالتفاصيل والتواصل الواضح — متجذِّرة في كل مشروع.">Precision, attention to detail, and clear communication built into every project.</div>
+    </div>
+
+  </div>
+
+  <!-- Values strip -->
+  <div class="about-values-bar reveal" style="margin-top:22px;">
+    <div class="aval-item">
+      <div class="aval-dot"></div>
       <div>
-        <div style="font-size:11px;color:var(--t3);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase">Year Progress</div>
-        <div class="progress-track"><div class="progress-fill"></div></div>
+        <div class="aval-strong" data-en="English &amp; Arabic" data-ar="عربي وإنجليزي">English &amp; Arabic</div>
+        <div class="aval-sub" data-en="Bilingual Communication" data-ar="تواصل ثنائي اللغة">Bilingual Communication</div>
       </div>
-      <div class="progress-label"><strong>2</strong> of <strong>52</strong> articles published</div>
     </div>
-
-    <!-- Controls row -->
-    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:28px">
-      <div class="lang-toggle">
-        <button class="lang-btn active" onclick="setLang('en',this)">English</button>
-        <button class="lang-btn" onclick="setLang('ar',this)">العربية</button>
+    <div class="aval-item">
+      <div class="aval-dot"></div>
+      <div>
+        <div class="aval-strong" data-en="USA &amp; Worldwide" data-ar="أمريكا والعالم">USA &amp; Worldwide</div>
+        <div class="aval-sub" data-en="Remote · Any Industry" data-ar="عن بُعد · أي قطاع">Remote · Any Industry</div>
       </div>
-      <div class="pillars-row" style="margin-top:0">
-        <span class="pillar-pill dm all-active" onclick="filterPillar('all',this)">✦ All</span>
-        <span class="pillar-pill dm" onclick="filterPillar('dm',this)">📊 Digital Marketing</span>
-        <span class="pillar-pill ai" onclick="filterPillar('ai',this)">🤖 AI in Business</span>
-        <span class="pillar-pill sm" onclick="filterPillar('sm',this)">📱 Social Media</span>
-        <span class="pillar-pill gr" onclick="filterPillar('gr',this)">🚀 Growth & Strategy</span>
+    </div>
+    <div class="aval-item">
+      <div class="aval-dot"></div>
+      <div>
+        <div class="aval-strong" data-en="Honesty First" data-ar="الصدق أولاً">Honesty First</div>
+        <div class="aval-sub" data-en="No Hype · Real Results" data-ar="بدون مبالغة · نتائج حقيقية">No Hype · Real Results</div>
       </div>
     </div>
   </div>
-</header>
 
-<!-- FEATURED -->
-<section class="section" style="padding-bottom:0">
-  <div class="section-label">Latest Article — Week 1</div>
-  <article class="featured" data-pillar="dm">
-    <div class="feat-body">
-      <div class="feat-meta">
-        <span class="feat-week">Week 01</span>
-        <span class="feat-tag">Digital Marketing</span>
-        <span class="feat-date">Saturday, June 6, 2026</span>
-      </div>
-      <h2 id="feat-title">Why Every Small Business Needs Digital Marketing in 2026</h2>
-      <p id="feat-desc">The internet is where your customers live, research, compare, and buy. In 2026, the question is not whether your small business should be online — but how well you show up when it matters.</p>
-      <div class="feat-ctas">
-        <a href="en/why-small-business-digital-marketing-2026.html" class="btn-en">Read in English →</a>
-        <a href="ar/al-tasweek-al-raqami-2026.html" class="btn-ar">اقرأ بالعربية ←</a>
-      </div>
-    </div>
-    <div class="feat-visual">
-      <div class="feat-big-num" aria-hidden="true">01</div>
-      <div class="feat-stats">
-        <div class="feat-stat">
-          <div class="feat-stat-n">67.9%</div>
-          <div class="feat-stat-l">of world population online</div>
-        </div>
-        <div class="feat-stat">
-          <div class="feat-stat-n">$5</div>
-          <div class="feat-stat-l">return per $1 in digital marketing</div>
-        </div>
-        <div class="feat-stat">
-          <div class="feat-stat-n">96%</div>
-          <div class="feat-stat-l">research online before buying</div>
-        </div>
-      </div>
-    </div>
-  </article>
 </section>
 
-<!-- UPCOMING GRID -->
-<section class="section">
-  <div class="articles-controls">
-    <div class="section-label" style="flex:1;margin-bottom:0">Upcoming Articles</div>
-    <div class="article-count" id="countLabel"><strong>50</strong> scheduled</div>
+<section id="portfolio" class="section section-dark">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="Our Work" data-ar="أعمالنا">Our Work</div></div>
+  <h2 class="sec-title reveal"><span data-en="Portfolio " data-ar="مكتبة ">Portfolio </span><span class="gold" data-en="Library" data-ar="الأعمال">Library</span></h2>
+  <p class="sec-sub reveal" data-en="Browse our concept designs by category — sample work showcasing our quality and style." data-ar="تصفّح نماذج تصاميمنا حسب التصنيف — أعمال توضيحية تعكس جودتنا وأسلوبنا.">Browse our concept designs by category — sample work showcasing our quality and style.</p>
+
+  <!-- Filter Tabs -->
+  <div class="port-filters reveal" id="portFilters">
+    <button class="pf-btn active" onclick="filterPort('all',this)"      data-en="All Work"   data-ar="الكل">الكل</button>
+    <button class="pf-btn" onclick="filterPort('social',this)"          data-en="Social Media" data-ar="سوشيال ميديا">سوشيال ميديا</button>
+    <button class="pf-btn" onclick="filterPort('ads',this)"             data-en="Ad Design"  data-ar="تصميم إعلانات">تصميم إعلانات</button>
+    <button class="pf-btn" onclick="filterPort('security',this)"        data-en="Security"   data-ar="الأمن">الأمن</button>
+    <button class="pf-btn" onclick="filterPort('health',this)"          data-en="Healthcare" data-ar="الصحة">الصحة</button>
+    <button class="pf-btn" onclick="filterPort('restaurant',this)"      data-en="Restaurants" data-ar="مطاعم">مطاعم</button>
+    <button class="pf-btn" onclick="filterPort('fashion',this)"         data-en="Fashion"    data-ar="الأزياء">الأزياء</button>
+    <button class="pf-btn" onclick="filterPort('business',this)"        data-en="Business"   data-ar="الأعمال">الأعمال</button>
   </div>
 
-  <div class="grid" id="grid">
+  <!-- Portfolio Grid -->
+  <div class="port-lib-grid reveal" id="portGrid">
 
-    <!-- Week 2 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">02</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">How Great Content Attracts Customers Without Paid Ads</div>
-      <div class="card-title ar-title ar" style="display:none">كيف يجذب المحتوى الجيد العملاء بدون إعلانات مدفوعة؟</div>
-      <div class="card-links">
-        <a href="en/how-content-attracts-customers-without-paid-ads.html" class="btn-en">Read in English →</a>
-        <a href="ar/al-muhtawa-yajlib-albaa-bila-ijlaanat.html" class="btn-ar">اقرأ بالعربية ←</a>
+    <!-- 1. Security Mission -->
+    <div class="plib-card" data-cat="ads security">
+      <div class="plib-prev">
+        <img src="/images/portfolio/security-mission.jpeg" alt="Security Services" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
       </div>
-      <div class="card-date">Jun 13, 2026</div>
-    </article>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Security" data-ar="الأمن">الأمن</span><span class="plib-tag" data-en="Ad Design" data-ar="إعلان">إعلان</span></div>
+        <div class="plib-title" data-en="Your Safety Is Our Mission" data-ar="سلامتك مهمتنا">Your Safety Is Our Mission</div>
+        <p class="plib-desc" data-en="Premium ad design for a security guard company — square format." data-ar="تصميم إعلاني احترافي لشركة حراسة — فورمات مربع.">تصميم إعلاني احترافي لشركة حراسة — فورمات مربع.</p>
+      </div>
+    </div>
 
-    <!-- Week 3 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">03</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">7 Social Media Mistakes That Are Quietly Hurting Your Business</div>
-      <div class="card-title ar-title ar" style="display:none">7 أخطاء على السوشال ميديا تضر بعملك بصمت</div>
-      <div class="card-date">Jun 20, 2026</div>
-    </article>
+    <!-- 2. Elite Security -->
+    <div class="plib-card" data-cat="ads security">
+      <div class="plib-prev">
+        <img src="/images/portfolio/elite-security.jpeg" alt="Elite Security" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Security" data-ar="الأمن">الأمن</span><span class="plib-tag" data-en="Premium" data-ar="فاخر">فاخر</span></div>
+        <div class="plib-title" data-en="Trusted. Trained. Protected." data-ar="موثوق. مدرب. محمي.">Trusted. Trained. Protected.</div>
+        <p class="plib-desc" data-en="Elite security brand — black & gold luxury ad design." data-ar="علامة أمنية فاخرة — تصميم ذهبي/أسود راقٍ.">علامة أمنية فاخرة — تصميم ذهبي/أسود راقٍ.</p>
+      </div>
+    </div>
 
-    <!-- Week 4 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">04</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">How to Build Customer Trust Online — A Small Business Guide</div>
-      <div class="card-title ar-title ar" style="display:none">كيف تبني ثقة العملاء على الإنترنت؟</div>
-      <div class="card-date">Jun 27, 2026</div>
-    </article>
+    <!-- 3. AI Security -->
+    <div class="plib-card" data-cat="ads security">
+      <div class="plib-prev">
+        <img src="/images/portfolio/ai-security.jpeg" alt="AI Security" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Security" data-ar="الأمن">الأمن</span><span class="plib-tag" data-en="AI" data-ar="ذكاء اصطناعي">ذكاء اصطناعي</span></div>
+        <div class="plib-title" data-en="Security Evolved." data-ar="الأمن في مستوى جديد.">Security Evolved.</div>
+        <p class="plib-desc" data-en="AI-powered security service — tech-forward dark blue design." data-ar="خدمة أمن بالذكاء الاصطناعي — تصميم تقني أزرق داكن.">خدمة أمن بالذكاء الاصطناعي — تصميم تقني أزرق داكن.</p>
+      </div>
+    </div>
 
-    <!-- Week 5 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">05</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Traditional vs. Digital Marketing: What Actually Works in 2026</div>
-      <div class="card-title ar-title ar" style="display:none">التسويق التقليدي مقابل الرقمي: ما يعمل فعلاً في 2026؟</div>
-      <div class="card-date">Jul 4, 2026</div>
-    </article>
+    <!-- 4. Healthcare -->
+    <div class="plib-card" data-cat="ads health">
+      <div class="plib-prev">
+        <img src="/images/portfolio/healthcare.jpeg" alt="Healthcare" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Healthcare" data-ar="الصحة">الصحة</span><span class="plib-tag" data-en="Ad Design" data-ar="إعلان">إعلان</span></div>
+        <div class="plib-title" data-en="Your Health In Expert Hands" data-ar="صحتك في أيدٍ خبيرة">Your Health In Expert Hands</div>
+        <p class="plib-desc" data-en="Medical clinic ad — dark teal professional design." data-ar="إعلان عيادة طبية — تصميم زمردي احترافي.">إعلان عيادة طبية — تصميم زمردي احترافي.</p>
+      </div>
+    </div>
 
-    <!-- Week 6 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">06</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Can Paid Ads Alone Grow Your Business? The Real Answer</div>
-      <div class="card-title ar-title ar" style="display:none">هل الإعلانات الممولة وحدها كافية لتنمية مشروعك؟</div>
-      <div class="card-date">Jul 11, 2026</div>
-    </article>
+    <!-- 5. Wellness Clinic -->
+    <div class="plib-card" data-cat="ads health">
+      <div class="plib-prev">
+        <img src="/images/portfolio/wellness-clinic.jpeg" alt="Wellness Clinic" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Healthcare" data-ar="الصحة">الصحة</span><span class="plib-tag" data-en="Family" data-ar="عائلي">عائلي</span></div>
+        <div class="plib-title" data-en="We Care For You & Your Family" data-ar="نهتم بك وبعائلتك">We Care For You & Your Family</div>
+        <p class="plib-desc" data-en="Wellness clinic — soft, warm family-care design." data-ar="عيادة عائلية — تصميم دافئ وناعم.">عيادة عائلية — تصميم دافئ وناعم.</p>
+      </div>
+    </div>
 
-    <!-- Week 7 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">07</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">How to Turn Social Media Followers Into Loyal Paying Customers</div>
-      <div class="card-title ar-title ar" style="display:none">كيف تحول متابعيك إلى عملاء حقيقيين؟</div>
-      <div class="card-date">Jul 18, 2026</div>
-    </article>
+    <!-- 6. Fine Dining -->
+    <div class="plib-card" data-cat="ads restaurant">
+      <div class="plib-prev">
+        <img src="/images/portfolio/fine-dining.jpeg" alt="Fine Dining" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Restaurant" data-ar="مطعم">مطعم</span><span class="plib-tag" data-en="Luxury" data-ar="فاخر">فاخر</span></div>
+        <div class="plib-title" data-en="Taste The Difference" data-ar="اكتشف الفرق">Taste The Difference</div>
+        <p class="plib-desc" data-en="Fine dining restaurant — premium dark gold ad design." data-ar="مطعم راقٍ — تصميم ذهبي داكن فاخر.">مطعم راقٍ — تصميم ذهبي داكن فاخر.</p>
+      </div>
+    </div>
 
-    <!-- Week 8 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">08</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Content Strategy That Increases Engagement on a Small Budget</div>
-      <div class="card-title ar-title ar" style="display:none">استراتيجية محتوى تزيد التفاعل بميزانية صغيرة</div>
-      <div class="card-date">Jul 25, 2026</div>
-    </article>
+    <!-- 7. Family Restaurant -->
+    <div class="plib-card" data-cat="ads restaurant">
+      <div class="plib-prev">
+        <img src="/images/portfolio/family-restaurant.jpeg" alt="Family Restaurant" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Restaurant" data-ar="مطعم">مطعم</span><span class="plib-tag" data-en="Family" data-ar="عائلي">عائلي</span></div>
+        <div class="plib-title" data-en="Where Every Meal Is A Memory" data-ar="حيث كل وجبة ذكرى">Where Every Meal Is A Memory</div>
+        <p class="plib-desc" data-en="Family restaurant — warm beige & orange concept design." data-ar="مطعم عائلي — تصميم دافئ بيج وبرتقالي.">مطعم عائلي — تصميم دافئ بيج وبرتقالي.</p>
+      </div>
+    </div>
 
-    <!-- Week 9 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">09</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Why Some Business Pages Fail Despite Posting Every Day</div>
-      <div class="card-title ar-title ar" style="display:none">لماذا تفشل بعض الصفحات رغم النشر اليومي؟</div>
-      <div class="card-date">Aug 1, 2026</div>
-    </article>
+    <!-- 8. Online Learning -->
+    <div class="plib-card" data-cat="ads business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/online-learning.jpeg" alt="Online Learning" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Education" data-ar="تعليم">تعليم</span><span class="plib-tag" data-en="Ad Design" data-ar="إعلان">إعلان</span></div>
+        <div class="plib-title" data-en="Unlock Your Full Potential" data-ar="أطلق إمكاناتك الكاملة">Unlock Your Full Potential</div>
+        <p class="plib-desc" data-en="Online learning platform — bold purple premium ad." data-ar="منصة تعليم إلكتروني — إعلان بنفسجي جريء.">منصة تعليم إلكتروني — إعلان بنفسجي جريء.</p>
+      </div>
+    </div>
 
-    <!-- Week 10 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">10</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">How to Build a Strong Online Brand Identity for Your Small Business</div>
-      <div class="card-title ar-title ar" style="display:none">كيف تبني هوية رقمية قوية لمشروعك؟</div>
-      <div class="card-date">Aug 8, 2026</div>
-    </article>
+    <!-- 9. Construction -->
+    <div class="plib-card" data-cat="social business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/construction.png" alt="Construction" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Construction" data-ar="البناء">البناء</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Build Your Vision" data-ar="ابنِ رؤيتك">Build Your Vision</div>
+        <p class="plib-desc" data-en="Construction company social media post — brown & gold theme." data-ar="منشور سوشيال ميديا لشركة بناء — لون بني وذهبي.">منشور سوشيال ميديا لشركة بناء — لون بني وذهبي.</p>
+      </div>
+    </div>
 
-    <!-- Week 11 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">11</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Email Marketing: The Underrated Growth Engine for Small Businesses</div>
-      <div class="card-title ar-title ar" style="display:none">التسويق بالبريد الإلكتروني: المحرك المُهمَل لنمو المشاريع</div>
-      <div class="card-date">Aug 15, 2026</div>
-    </article>
+    <!-- 10. Real Estate -->
+    <div class="plib-card" data-cat="social business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/real-estate.png" alt="Real Estate" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Real Estate" data-ar="عقارات">عقارات</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Find Your Dream Home" data-ar="اعثر على منزل أحلامك">Find Your Dream Home</div>
+        <p class="plib-desc" data-en="Real estate agency social post — dark navy blue design." data-ar="منشور وكالة عقارية — تصميم أزرق داكن.">منشور وكالة عقارية — تصميم أزرق داكن.</p>
+      </div>
+    </div>
 
-    <!-- Week 12 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">12</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Local SEO: How to Get Found by Customers in Your Area</div>
-      <div class="card-title ar-title ar" style="display:none">السيو المحلي: كيف يجدك العملاء في منطقتك؟</div>
-      <div class="card-date">Aug 22, 2026</div>
-    </article>
+    <!-- 11. Tax & Accounting -->
+    <div class="plib-card" data-cat="social business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/tax-accounting.png" alt="Tax & Accounting" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Finance" data-ar="مالية">مالية</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Maximize Your Return" data-ar="حقق أعلى استرداد">Maximize Your Return</div>
+        <p class="plib-desc" data-en="Tax & accounting firm social post — dark green professional." data-ar="منشور مكتب ضرائب ومحاسبة — أخضر داكن احترافي.">منشور مكتب ضرائب ومحاسبة — أخضر داكن احترافي.</p>
+      </div>
+    </div>
 
-    <!-- Week 13 -->
-    <article class="card" data-pillar="dm">
-      <div class="card-week-badge">13</div>
-      <div class="card-pillar p-dm">📊 Digital Marketing</div>
-      <div class="card-title en-title">Google My Business: Your Free Marketing Weapon (Complete Guide)</div>
-      <div class="card-title ar-title ar" style="display:none">Google My Business: سلاحك التسويقي المجاني</div>
-      <div class="card-date">Aug 29, 2026</div>
-    </article>
+    <!-- 12. Legal Services -->
+    <div class="plib-card" data-cat="social business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/legal-services.png" alt="Legal Services" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Legal" data-ar="قانوني">قانوني</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Your Rights Protected" data-ar="حقوقك محفوظة">Your Rights Protected</div>
+        <p class="plib-desc" data-en="Legal services social post — dark navy & gold bilingual design." data-ar="منشور خدمات قانونية — أزرق داكن وذهبي ثنائي اللغة.">منشور خدمات قانونية — أزرق داكن وذهبي ثنائي اللغة.</p>
+      </div>
+    </div>
 
-    <!-- Week 14 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">14</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">How AI Is Helping Small Businesses Compete With Big Brands</div>
-      <div class="card-title ar-title ar" style="display:none">كيف يساعد الذكاء الاصطناعي المشاريع الصغيرة على منافسة الكبار؟</div>
-      <div class="card-date">Sep 5, 2026</div>
-    </article>
+    <!-- 13. Dental Care -->
+    <div class="plib-card" data-cat="social health">
+      <div class="plib-prev">
+        <img src="/images/portfolio/dental-care.png" alt="Dental Care" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Healthcare" data-ar="الصحة">الصحة</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Your Smile, Our Priority" data-ar="ابتسامتك أولويتنا">Your Smile, Our Priority</div>
+        <p class="plib-desc" data-en="Dental clinic social post — dark navy blue Arabic-speaking staff." data-ar="منشور عيادة أسنان — أزرق داكن مع كادر ناطق بالعربية.">منشور عيادة أسنان — أزرق داكن مع كادر ناطق بالعربية.</p>
+      </div>
+    </div>
 
-    <!-- Week 15 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">15</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">The Future of AI in Digital Marketing: What's Coming Next</div>
-      <div class="card-title ar-title ar" style="display:none">مستقبل الذكاء الاصطناعي في التسويق الرقمي</div>
-      <div class="card-date">Sep 12, 2026</div>
-    </article>
+    <!-- 14. Travel Agency -->
+    <div class="plib-card" data-cat="social">
+      <div class="plib-prev">
+        <img src="/images/portfolio/travel-agency.png" alt="Travel Agency" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Travel" data-ar="سفر">سفر</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Explore The World" data-ar="اكتشف العالم">Explore The World</div>
+        <p class="plib-desc" data-en="Travel agency social post — dark blue with flight theme." data-ar="منشور وكالة سفر — أزرق داكن بثيم الطيران.">منشور وكالة سفر — أزرق داكن بثيم الطيران.</p>
+      </div>
+    </div>
 
-    <!-- Week 16 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">16</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">Best AI Tools for Content Creation in 2026</div>
-      <div class="card-title ar-title ar" style="display:none">أفضل أدوات الذكاء الاصطناعي لصناعة المحتوى في 2026</div>
-      <div class="card-date">Sep 19, 2026</div>
-    </article>
+    <!-- 15. Gym & Fitness -->
+    <div class="plib-card" data-cat="social health">
+      <div class="plib-prev">
+        <img src="/images/portfolio/gym-fitness.png" alt="Gym & Fitness" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Fitness" data-ar="رياضة">رياضة</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Train Like A Pro" data-ar="تدرب كالمحترفين">Train Like A Pro</div>
+        <p class="plib-desc" data-en="Gym social post — bold red & dark energetic design." data-ar="منشور صالة رياضية — تصميم أحمر داكن نابض بالطاقة.">منشور صالة رياضية — تصميم أحمر داكن نابض بالطاقة.</p>
+      </div>
+    </div>
 
-    <!-- Week 17 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">17</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">Will AI Replace Digital Marketers? The Honest Answer</div>
-      <div class="card-title ar-title ar" style="display:none">هل سيستبدل الذكاء الاصطناعي المسوقين؟ الإجابة الصادقة</div>
-      <div class="card-date">Sep 26, 2026</div>
-    </article>
+    <!-- 16. Electronics -->
+    <div class="plib-card" data-cat="social business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/electronics.png" alt="Electronics" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Electronics" data-ar="إلكترونيات">إلكترونيات</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Repair & Upgrade" data-ar="صيانة وترقية">Repair & Upgrade</div>
+        <p class="plib-desc" data-en="Electronics repair shop post — deep purple modern design." data-ar="منشور محل إلكترونيات — تصميم بنفسجي عصري.">منشور محل إلكترونيات — تصميم بنفسجي عصري.</p>
+      </div>
+    </div>
 
-    <!-- Week 18 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">18</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">How to Use ChatGPT to Grow Your Business — Practical Guide</div>
-      <div class="card-title ar-title ar" style="display:none">كيف تستخدم ChatGPT لتنمية مشروعك؟ دليل عملي</div>
-      <div class="card-date">Oct 3, 2026</div>
-    </article>
+    <!-- 17. Transportation -->
+    <div class="plib-card" data-cat="social business">
+      <div class="plib-prev">
+        <img src="/images/portfolio/transportation.png" alt="Transportation" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Transport" data-ar="نقل">نقل</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="On Time, Every Ride" data-ar="في الوقت المحدد دائماً">On Time, Every Ride</div>
+        <p class="plib-desc" data-en="Transportation company social post — dark navy blue design." data-ar="منشور شركة نقل — تصميم أزرق داكن احترافي.">منشور شركة نقل — تصميم أزرق داكن احترافي.</p>
+      </div>
+    </div>
 
-    <!-- Week 19 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">19</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">5 Ways AI Saves Small Business Owners Time and Money</div>
-      <div class="card-title ar-title ar" style="display:none">5 طرق يوفر بها الذكاء الاصطناعي الوقت والمال</div>
-      <div class="card-date">Oct 10, 2026</div>
-    </article>
+    <!-- 18. Cleaning Services -->
+    <div class="plib-card" data-cat="social">
+      <div class="plib-prev">
+        <img src="/images/portfolio/cleaning.png" alt="Cleaning Services" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Cleaning" data-ar="تنظيف">تنظيف</span><span class="plib-tag" data-en="Social Media" data-ar="سوشيال">سوشيال</span></div>
+        <div class="plib-title" data-en="Spotless Every Time" data-ar="نظيف في كل مرة">Spotless Every Time</div>
+        <p class="plib-desc" data-en="Cleaning service social post — teal green professional design." data-ar="منشور خدمة تنظيف — تصميم أخضر زمردي احترافي.">منشور خدمة تنظيف — تصميم أخضر زمردي احترافي.</p>
+      </div>
+    </div>
 
-    <!-- Week 20 -->
-    <article class="card" data-pillar="ai">
-      <div class="card-week-badge">20</div>
-      <div class="card-pillar p-ai">🤖 AI in Business</div>
-      <div class="card-title en-title">AI and Short-Form Video: The Future of Social Content</div>
-      <div class="card-title ar-title ar" style="display:none">الذكاء الاصطناعي والفيديو القصير: مستقبل محتوى السوشال</div>
-      <div class="card-date">Oct 17, 2026</div>
-    </article>
+    <!-- 19. Kids Islamic Fashion -->
+    <div class="plib-card" data-cat="social fashion">
+      <div class="plib-prev">
+        <img src="/images/portfolio/kids-islamic-fashion.png" alt="Kids Islamic Fashion" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Fashion" data-ar="أزياء">أزياء</span><span class="plib-tag" data-en="Islamic" data-ar="إسلامي">إسلامي</span></div>
+        <div class="plib-title" data-en="Kids Islamic Fashion" data-ar="أزياء إسلامية للأطفال">Kids Islamic Fashion</div>
+        <p class="plib-desc" data-en="Islamic kids fashion brand — elegant gold & black concept." data-ar="علامة أزياء إسلامية للأطفال — تصميم ذهبي أسود أنيق.">علامة أزياء إسلامية للأطفال — تصميم ذهبي أسود أنيق.</p>
+      </div>
+    </div>
 
-    <!-- Week 21-26 AI -->
-    <article class="card" data-pillar="ai"><div class="card-week-badge">21</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">Can AI Manage Your Social Media Accounts?</div><div class="card-title ar-title ar" style="display:none">هل يمكن للذكاء الاصطناعي إدارة حسابات التواصل؟</div><div class="card-date">Oct 24, 2026</div></article>
-    <article class="card" data-pillar="ai"><div class="card-week-badge">22</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">AI-Powered Email Marketing: What's Working Right Now</div><div class="card-title ar-title ar" style="display:none">التسويق بالبريد مع الذكاء الاصطناعي: ما يعمل الآن</div><div class="card-date">Oct 31, 2026</div></article>
-    <article class="card" data-pillar="ai"><div class="card-week-badge">23</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">Using AI for Customer Service: A Small Business Guide</div><div class="card-title ar-title ar" style="display:none">استخدام الذكاء الاصطناعي في خدمة العملاء</div><div class="card-date">Nov 7, 2026</div></article>
-    <article class="card" data-pillar="ai"><div class="card-week-badge">24</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">AI Analytics: Understanding Your Customers Better Than Ever</div><div class="card-title ar-title ar" style="display:none">تحليلات الذكاء الاصطناعي: افهم عملاءك أعمق</div><div class="card-date">Nov 14, 2026</div></article>
-    <article class="card" data-pillar="ai"><div class="card-week-badge">25</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">The Ethics of AI in Marketing: What Every Owner Must Know</div><div class="card-title ar-title ar" style="display:none">أخلاقيات الذكاء الاصطناعي في التسويق</div><div class="card-date">Nov 21, 2026</div></article>
-    <article class="card" data-pillar="ai"><div class="card-week-badge">26</div><div class="card-pillar p-ai">🤖 AI in Business</div><div class="card-title en-title">AI and SEO: How Search Is Changing in 2026</div><div class="card-title ar-title ar" style="display:none">الذكاء الاصطناعي والسيو: كيف يتغير البحث</div><div class="card-date">Nov 28, 2026</div></article>
+    <!-- 20. Abaya Collection -->
+    <div class="plib-card" data-cat="social fashion">
+      <div class="plib-prev">
+        <img src="/images/portfolio/abaya-fashion.png" alt="Abaya Collection" class="port-img">
+        <div class="plib-overlay"><span class="plib-view" data-en="View Details" data-ar="تفاصيل">تفاصيل</span></div>
+      </div>
+      <div class="plib-info">
+        <div class="plib-cats"><span class="plib-tag" data-en="Fashion" data-ar="أزياء">أزياء</span><span class="plib-tag" data-en="Modest Wear" data-ar="لباس محتشم">لباس محتشم</span></div>
+        <div class="plib-title" data-en="Abaya Collection" data-ar="كوليكشن العباءات">Abaya Collection</div>
+        <p class="plib-desc" data-en="Islamic modest fashion post — purple luxury concept design." data-ar="منشور أزياء إسلامية محتشمة — تصميم بنفسجي فاخر.">منشور أزياء إسلامية محتشمة — تصميم بنفسجي فاخر.</p>
+      </div>
+    </div>
 
-    <!-- Week 27-39 Social Media -->
-    <article class="card" data-pillar="sm"><div class="card-week-badge">27</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Manage a Professional Facebook Page That Drives Results</div><div class="card-title ar-title ar" style="display:none">كيف تدير صفحة فيسبوك احترافية تحقق نتائج حقيقية؟</div><div class="card-date">Dec 5, 2026</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">28</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Best Times to Post on Social Media for Maximum Engagement</div><div class="card-title ar-title ar" style="display:none">أفضل أوقات النشر لأعلى تفاعل</div><div class="card-date">Dec 12, 2026</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">29</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Why Every Small Business Needs a Strong Social Media Presence</div><div class="card-title ar-title ar" style="display:none">لماذا يحتاج كل مشروع حضوراً قوياً على السوشال؟</div><div class="card-date">Dec 19, 2026</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">30</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">The Data-Backed Secret Behind Viral Reels and Short Videos</div><div class="card-title ar-title ar" style="display:none">سر الريلز والفيديوهات الناجحة — بالأرقام</div><div class="card-date">Dec 26, 2026</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">31</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Increase Engagement on Your Social Media Posts</div><div class="card-title ar-title ar" style="display:none">كيف تزيد التفاعل على منشوراتك؟</div><div class="card-date">Jan 2, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">32</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">A Simple Weekly Social Media Plan for Small Business Owners</div><div class="card-title ar-title ar" style="display:none">خطة أسبوعية بسيطة لإدارة السوشال ميديا</div><div class="card-date">Jan 9, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">33</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Create Content That Attracts Local Customers</div><div class="card-title ar-title ar" style="display:none">كيف تنشئ محتوى يجذب العملاء المحليين؟</div><div class="card-date">Jan 16, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">34</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Best Free Tools for Social Media Management in 2027</div><div class="card-title ar-title ar" style="display:none">أفضل الأدوات المجانية لإدارة السوشال ميديا 2027</div><div class="card-date">Jan 23, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">35</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">How to Stay Consistent on Social Media Without Burning Out</div><div class="card-title ar-title ar" style="display:none">كيف تحافظ على الاتساق بدون إرهاق؟</div><div class="card-date">Jan 30, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">36</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Building a Loyal Online Community Around Your Brand</div><div class="card-title ar-title ar" style="display:none">كيف تبني مجتمعاً أونلاين مخلصاً لعلامتك؟</div><div class="card-date">Feb 6, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">37</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Instagram vs. Facebook vs. LinkedIn: Which Platform Is Right for You?</div><div class="card-title ar-title ar" style="display:none">إنستغرام vs فيسبوك vs لينكدإن: أيهم يناسبك؟</div><div class="card-date">Feb 13, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">38</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">TikTok for Small Business: Is It Worth the Investment in 2027?</div><div class="card-title ar-title ar" style="display:none">تيك توك للمشاريع: هل يستحق الاستثمار في 2027؟</div><div class="card-date">Feb 20, 2027</div></article>
-    <article class="card" data-pillar="sm"><div class="card-week-badge">39</div><div class="card-pillar p-sm">📱 Social Media</div><div class="card-title en-title">Social Proof: How to Use Reviews to Drive More Sales</div><div class="card-title ar-title ar" style="display:none">الدليل الاجتماعي: كيف تستخدم التقييمات لزيادة المبيعات؟</div><div class="card-date">Feb 27, 2027</div></article>
+  </div><!-- /port-lib-grid -->
 
-    <!-- Week 40-52 Growth -->
-    <article class="card" data-pillar="gr"><div class="card-week-badge">40</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Video Marketing for Small Businesses: Where to Start</div><div class="card-title ar-title ar" style="display:none">تسويق الفيديو للمشاريع الصغيرة: من أين تبدأ؟</div><div class="card-date">Mar 6, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">41</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">How to Write Headlines That Actually Get Clicks</div><div class="card-title ar-title ar" style="display:none">كيف تكتب عناوين تجذب النقرات فعلاً؟</div><div class="card-date">Mar 13, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">42</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Landing Pages That Convert: What Small Businesses Get Wrong</div><div class="card-title ar-title ar" style="display:none">صفحات الهبوط التي تحوّل: الأخطاء الشائعة</div><div class="card-date">Mar 20, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">43</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Marketing on a Budget: Best Free Strategies for 2027</div><div class="card-title ar-title ar" style="display:none">التسويق بميزانية محدودة: أفضل الاستراتيجيات المجانية</div><div class="card-date">Mar 27, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">44</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">The Power of Customer Reviews and How to Get More</div><div class="card-title ar-title ar" style="display:none">قوة تقييمات العملاء وكيف تحصل على المزيد</div><div class="card-date">Apr 3, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">45</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Hashtag Strategy: What Actually Works (and What Doesn't)</div><div class="card-title ar-title ar" style="display:none">استراتيجية الهاشتاق: ما يعمل وما لا يعمل</div><div class="card-date">Apr 10, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">46</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Social Media Analytics: The Metrics That Actually Matter</div><div class="card-title ar-title ar" style="display:none">تحليلات السوشال ميديا: الأرقام التي تهم فعلاً</div><div class="card-date">Apr 17, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">47</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">How to Write a Simple Marketing Plan for Your Business</div><div class="card-title ar-title ar" style="display:none">كيف تكتب خطة تسويقية بسيطة لمشروعك؟</div><div class="card-date">Apr 24, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">48</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Omnichannel Marketing: Why Your Business Needs to Be Everywhere</div><div class="card-title ar-title ar" style="display:none">التسويق متعدد القنوات: لماذا تكون في كل مكان؟</div><div class="card-date">May 1, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">49</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Personal Branding for Small Business Owners: Your Biggest Edge</div><div class="card-title ar-title ar" style="display:none">العلامة الشخصية: ميزتك التنافسية الأكبر</div><div class="card-date">May 8, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">50</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">AI Chatbots for Small Business: Are They Worth It?</div><div class="card-title ar-title ar" style="display:none">روبوتات الدردشة بالذكاء الاصطناعي: هل تستحق؟</div><div class="card-date">May 15, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">51</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Building a Complete AI-Assisted Marketing Strategy From Scratch</div><div class="card-title ar-title ar" style="display:none">بناء استراتيجية تسويق متكاملة بالذكاء الاصطناعي</div><div class="card-date">May 22, 2027</div></article>
-    <article class="card" data-pillar="gr"><div class="card-week-badge">52</div><div class="card-pillar p-gr">🚀 Growth & Strategy</div><div class="card-title en-title">Year in Review: The Biggest Digital Marketing Lessons of 2026–2027</div><div class="card-title ar-title ar" style="display:none">مراجعة عام كامل: أهم دروس التسويق الرقمي 2026–2027</div><div class="card-date">May 29, 2027</div></article>
+  <!-- CTA to contact -->
+  <div class="port-lib-cta reveal">
+    <p data-en="Want to see your business here? Let's create together." data-ar="تريد أن تظهر أعمالك هنا؟ لنصنع معاً شيئاً مميزاً.">تريد أن تظهر أعمالك هنا؟ لنصنع معاً شيئاً مميزاً.</p>
+    <a href="#contact" class="btn-gold" data-en="Start Your Project →" data-ar="← ابدأ مشروعك">← ابدأ مشروعك</a>
+  </div>
 
-  </div><!-- /grid -->
 </section>
 
-<footer>
-  <div class="footer-brand">© 2026 Sanose Rabih | AI Marketing Specialist</div>
-  <div class="footer-note">sanoserabih.com · Published every Saturday</div>
+<!-- ═══ PRICING ═══ -->
+<section id="pricing" class="section">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="Transparent Pricing" data-ar="أسعار شفافة">Transparent Pricing</div></div>
+  <h2 class="sec-title reveal"><span data-en="Simple, " data-ar="خطط بسيطة ">Simple, </span><span class="gold" data-en="Honest Plans" data-ar="وواضحة">Honest Plans</span></h2>
+  <p class="sec-sub reveal" data-en="No hidden fees. Cancel anytime. Start with a free sample." data-ar="لا رسوم خفية. الإلغاء في أيّ وقت. ابدأ بعيّنة مجانية.">No hidden fees. Cancel anytime. Start with a free sample.</p>
+  <div class="price-grid reveal">
+    <div class="price-card">
+      <div class="price-tier" data-en="Starter" data-ar="الباقة الأساسية">Starter</div>
+      <div class="price-val"><sup>$</sup>75</div>
+      <div class="price-per" data-en="per month" data-ar="شهرياً">per month</div>
+      <div class="price-div"></div>
+      <ul class="price-feats">
+        <li data-en="8 Professional Posts" data-ar="8 منشورات احترافية">8 Professional Posts</li>
+        <li data-en="Facebook + Instagram" data-ar="فيسبوك + إنستغرام">Facebook + Instagram</li>
+        <li data-en="English or Arabic" data-ar="عربي أو إنجليزي">English or Arabic</li>
+        <li data-en="Custom Branded Design" data-ar="تصميم بهوية مخصَّصة">Custom Branded Design</li>
+        <li data-en="Monthly Strategy Call" data-ar="مكالمة استراتيجية شهرية">Monthly Strategy Call</li>
+      </ul>
+      <a href="#" onclick="openModal();return false;" class="price-btn price-btn-out" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
+    </div>
+    <div class="price-card feat">
+      <div class="feat-badge" data-en="Most Popular" data-ar="الأكثر طلباً">Most Popular</div>
+      <div class="price-tier" data-en="Growth" data-ar="باقة النموّ">Growth</div>
+      <div class="price-val"><sup>$</sup>150</div>
+      <div class="price-per" data-en="per month" data-ar="شهرياً">per month</div>
+      <div class="price-div"></div>
+      <ul class="price-feats">
+        <li data-en="16 Professional Posts" data-ar="16 منشوراً احترافياً">16 Professional Posts</li>
+        <li data-en="All Social Platforms" data-ar="جميع المنصّات">All Social Platforms</li>
+        <li data-en="English + Arabic" data-ar="عربي + إنجليزي">English + Arabic</li>
+        <li data-en="Stories &amp; Reels" data-ar="ستوريز وريلز">Stories &amp; Reels</li>
+        <li data-en="Email Campaign (monthly)" data-ar="حملة بريد إلكتروني شهرية">Email Campaign (monthly)</li>
+        <li data-en="Priority Support" data-ar="دعم ذو أولوية">Priority Support</li>
+      </ul>
+      <a href="#" onclick="openModal();return false;" class="price-btn price-btn-fill" data-en="Start Growing" data-ar="ابدأ النموّ">Start Growing</a>
+    </div>
+    <div class="price-card">
+      <div class="price-tier" data-en="Full Package" data-ar="الباقة الكاملة">Full Package</div>
+      <div class="price-val"><sup>$</sup>250</div>
+      <div class="price-per" data-en="per month" data-ar="شهرياً">per month</div>
+      <div class="price-div"></div>
+      <ul class="price-feats">
+        <li data-en="20+ Posts + Stories" data-ar="أكثر من 20 منشوراً وستوريز">20+ Posts + Stories</li>
+        <li data-en="All Platforms + WhatsApp" data-ar="جميع المنصّات + واتساب">All Platforms + WhatsApp</li>
+        <li data-en="Video Translation (2x)" data-ar="ترجمة فيديو (مرّتان)">Video Translation (2x)</li>
+        <li data-en="Brand Strategy Session" data-ar="جلسة استراتيجية للعلامة">Brand Strategy Session</li>
+        <li data-en="Weekly Performance Report" data-ar="تقرير أداء أسبوعي">Weekly Performance Report</li>
+        <li data-en="Dedicated Manager" data-ar="مدير حساب مخصَّص">Dedicated Manager</li>
+      </ul>
+      <a href="#" onclick="openModal();return false;" class="price-btn price-btn-out" data-en="Get Full Package" data-ar="احصل على الباقة الكاملة">Get Full Package</a>
+    </div>
+  </div>
+  <!-- Pay Now link -->
+  <div style="text-align:center;margin-top:28px;">
+    <a href="/pay.html"
+       style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;border:1px solid rgba(201,168,76,.35);color:var(--gold);font-size:14px;text-decoration:none;font-family:var(--font);transition:all .2s;background:rgba(201,168,76,.05);"
+       onmouseover="this.style.borderColor='var(--gold)';this.style.background='rgba(201,168,76,.1)'"
+       onmouseout="this.style.borderColor='rgba(201,168,76,.35)';this.style.background='rgba(201,168,76,.05)'">
+      <span data-en="💳 View Payment Methods" data-ar="💳 طرق الدفع">💳 View Payment Methods</span>
+    </a>
+  </div>
+</section>
+<section id="process" class="section section-dark">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="How It Works" data-ar="كيف يعمل">How It Works</div></div>
+  <h2 class="sec-title reveal"><span data-en="4 Steps to " data-ar="4 خطوات نحو ">4 Steps to </span><span class="gold" data-en="Success" data-ar="النجاح">Success</span></h2>
+  <p class="sec-sub reveal" data-en="From first contact to published content in days, not weeks." data-ar="من أوّل تواصل إلى محتوى منشور في أيّام، لا في أسابيع.">From first contact to published content in days, not weeks.</p>
+  <div class="process-grid reveal">
+    <div class="step"><div class="step-n">01</div><div class="step-t" data-en="Free Sample" data-ar="عيّنة مجانية">Free Sample</div><p class="step-d" data-en="Receive a free custom content sample designed specifically for your business — no commitment required." data-ar="احصل على عيّنة محتوى مجانية مصمَّمة لشركتك — دون أيّ التزام مسبق.">Receive a free custom content sample designed specifically for your business — no commitment required.</p></div>
+    <div class="step"><div class="step-n">02</div><div class="step-t" data-en="Strategy Call" data-ar="مكالمة استراتيجية">Strategy Call</div><p class="step-d" data-en="We discuss your goals, audience and competitors to build a content strategy that actually converts." data-ar="نناقش أهدافك وجمهورك ومنافسيك لبناء استراتيجية محتوى تُحوِّل الزوّار فعلاً.">We discuss your goals, audience and competitors to build a content strategy that actually converts.</p></div>
+    <div class="step"><div class="step-n">03</div><div class="step-t" data-en="AI Creation" data-ar="الإنشاء بالذكاء الاصطناعي">AI Creation</div><p class="step-d" data-en="Professional posts, graphics and copy are created using the latest AI tools and delivered on time." data-ar="تُنشأ منشورات احترافية وجرافيك ونصوص بأحدث أدوات الذكاء الاصطناعي وتُسلَّم في الموعد.">Professional posts, graphics and copy are created using the latest AI tools and delivered on time.</p></div>
+    <div class="step"><div class="step-n">04</div><div class="step-t" data-en="Grow &amp; Scale" data-ar="النموّ والتوسّع">Grow &amp; Scale</div><p class="step-d" data-en="We track results, refine strategy monthly and help your business consistently attract new customers." data-ar="نتابع النتائج ونُحسِّن الاستراتيجية شهرياً لمساعدة شركتك على اكتساب عملاء جدد باستمرار.">We track results, refine strategy monthly and help your business consistently attract new customers.</p></div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials" class="section">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="Be First" data-ar="كن الأول">Be First</div></div>
+  <h2 class="sec-title reveal"><span data-en="Your Review " data-ar="رأيك ">Your Review </span><span class="gold" data-en="Could Be Here" data-ar="يمكن أن يكون هنا">Could Be Here</span></h2>
+  <p class="sec-sub reveal" data-en="We are just launching — be among the first clients and get a free sample of our work." data-ar="نحن في مرحلة الإطلاق — كن من أوائل عملائنا واحصل على عيّنة مجانية من أعمالنا.">We are just launching — be among the first clients and get a free sample of our work.</p>
+  <div class="reveal" style="text-align:center;margin-top:32px;">
+    <a href="#cta" class="btn-gold" data-en="✦ Get Your Free Sample" data-ar="✦ احصل على عيّنتك المجانية">✦ Get Your Free Sample</a>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+
+<!-- ══════════════════════════════════════ -->
+<!-- FAQ SECTION                            -->
+<!-- ══════════════════════════════════════ -->
+<section id="faq" class="section">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="FAQ" data-ar="أسئلة شائعة">FAQ</div></div>
+  <h2 class="sec-title reveal">
+    <span data-en="Questions " data-ar="أسئلة ">Questions </span>
+    <span class="gold" data-en="& Answers" data-ar="وأجوبة">& Answers</span>
+  </h2>
+  <p class="sec-sub reveal"
+     data-en="Everything you need to know before we work together."
+     data-ar="كل ما تحتاج معرفته قبل أن نبدأ العمل معاً.">
+    Everything you need to know before we work together.
+  </p>
+
+  <div class="faq-list reveal" style="max-width:820px;margin:60px auto 0;padding:0 24px">
+
+    <!-- FAQ Item 1 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="What exactly does an AI Marketing Specialist do?"
+              data-ar="ماذا يفعل متخصص التسويق بالذكاء الاصطناعي تحديداً؟">
+          What exactly does an AI Marketing Specialist do?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="I use advanced AI tools to create professional marketing content — social media posts, brand designs, ad copy, and full marketing strategies — faster and at higher quality than traditional methods. Think of it as having a full marketing team powered by the latest AI technology, at a fraction of the cost."
+           data-ar="أستخدم أدوات الذكاء الاصطناعي المتقدمة لإنشاء محتوى تسويقي احترافي — منشورات وسائل التواصل الاجتماعي، تصاميم العلامة التجارية، نصوص الإعلانات، والاستراتيجيات التسويقية الكاملة — بشكل أسرع وبجودة أعلى من الأساليب التقليدية.">
+        I use advanced AI tools to create professional marketing content — social media posts, brand designs, ad copy, and full marketing strategies — faster and at higher quality than traditional methods. Think of it as having a full marketing team powered by the latest AI technology, at a fraction of the cost.
+      </div>
+    </details>
+
+    <!-- FAQ Item 2 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="Do you work with businesses outside the USA?"
+              data-ar="هل تعمل مع شركات خارج الولايات المتحدة؟">
+          Do you work with businesses outside the USA?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="Absolutely. All my services are 100% remote and digital. I work with clients across the USA, Canada, UK, UAE, Saudi Arabia, Egypt, and anywhere in the world. If you have an internet connection, we can work together."
+           data-ar="بالتأكيد. جميع خدماتي رقمية بالكامل عن بُعد. أعمل مع عملاء في الولايات المتحدة، كندا، المملكة المتحدة، الإمارات، السعودية، مصر، وفي أي مكان في العالم.">
+        Absolutely. All my services are 100% remote and digital. I work with clients across the USA, Canada, UK, UAE, Saudi Arabia, Egypt, and anywhere in the world. If you have an internet connection, we can work together.
+      </div>
+    </details>
+
+    <!-- FAQ Item 3 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="How long does it take to deliver content?"
+              data-ar="كم يستغرق تسليم المحتوى؟">
+          How long does it take to deliver content?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="Delivery times depend on the package. Typically: Social media content packs are delivered within 3-5 business days. Brand identity projects take 5-7 business days. Rush delivery (24-48 hours) is available for an additional fee. I always confirm timelines before starting any project."
+           data-ar="تختلف أوقات التسليم حسب الحزمة. عادةً: حزم محتوى وسائل التواصل تُسلّم خلال 3-5 أيام عمل. مشاريع الهوية البصرية تستغرق 5-7 أيام عمل. التسليم العاجل (24-48 ساعة) متاح برسوم إضافية.">
+        Delivery times depend on the package. Typically: Social media content packs are delivered within 3-5 business days. Brand identity projects take 5-7 business days. Rush delivery (24-48 hours) is available for an additional fee. I always confirm timelines before starting any project.
+      </div>
+    </details>
+
+    <!-- FAQ Item 4 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="What if I'm not satisfied with the result?"
+              data-ar="ماذا لو لم أكن راضياً عن النتيجة؟">
+          What if I'm not satisfied with the result?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="Your satisfaction is my priority. Every package includes up to 2 revision rounds at no extra cost. If after revisions you are still not happy, we will discuss a fair solution together. I believe in long-term relationships, not one-time transactions."
+           data-ar="رضاك هو أولويتي. كل حزمة تشمل ما يصل إلى جولتين من التعديلات بدون تكلفة إضافية. إذا لم تكن راضياً بعد التعديلات، سنناقش حلاً عادلاً معاً. أؤمن بالعلاقات طويلة الأمد، لا المعاملات الفردية.">
+        Your satisfaction is my priority. Every package includes up to 2 revision rounds at no extra cost. If after revisions you are still not happy, we will discuss a fair solution together. I believe in long-term relationships, not one-time transactions.
+      </div>
+    </details>
+
+    <!-- FAQ Item 5 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="Can you create content in both Arabic and English?"
+              data-ar="هل يمكنك إنشاء محتوى باللغتين العربية والإنجليزية؟">
+          Can you create content in both Arabic and English?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="Yes — this is one of my core strengths. Arabic is my native language and English is my professional working language. I don't just translate; I create original content in both languages that feels natural and authentic to each audience."
+           data-ar="نعم — هذه إحدى نقاط قوتي الأساسية. العربية لغتي الأم والإنجليزية لغة عملي الاحترافية. لا أترجم فحسب؛ بل أنشئ محتوى أصيلاً بكلتا اللغتين يبدو طبيعياً لكل جمهور.">
+        Yes — this is one of my core strengths. Arabic is my native language and English is my professional working language. I don't just translate; I create original content in both languages that feels natural and authentic to each audience.
+      </div>
+    </details>
+
+    <!-- FAQ Item 6 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="How do I get started?"
+              data-ar="كيف أبدأ؟">
+          How do I get started?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="It's simple: 1) Request your free sample using the button below. 2) I'll create a sample piece of content for your business at no charge. 3) If you love it, we discuss the right package for your needs. No pressure, no obligation."
+           data-ar="الأمر بسيط: 1) اطلب عيّنتك المجانية باستخدام الزر أدناه. 2) سأنشئ قطعة محتوى نموذجية لعملك مجاناً. 3) إذا أعجبتك، نناقش الحزمة المناسبة لاحتياجاتك. بدون ضغط أو التزام.">
+        It's simple: 1) Request your free sample using the button below. 2) I'll create a sample piece of content for your business at no charge. 3) If you love it, we discuss the right package for your needs. No pressure, no obligation.
+      </div>
+    </details>
+
+    <!-- FAQ Item 7 -->
+    <details class="faq-item" style="border:1px solid rgba(212,175,55,0.2);border-radius:10px;margin-bottom:14px;overflow:hidden">
+      <summary style="padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;background:rgba(212,175,55,0.05)">
+        <span style="color:var(--cream);font-weight:600;font-size:1rem"
+              data-en="What payment methods do you accept?"
+              data-ar="ما طرق الدفع المقبولة؟">
+          What payment methods do you accept?
+        </span>
+        <span class="faq-icon" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;margin-left:16px">＋</span>
+      </summary>
+      <div style="padding:0 28px 22px;color:var(--muted);line-height:1.8;font-size:0.95rem"
+           data-en="I accept PayPal, Zelle, bank transfer, and payments through Fiverr (which offers buyer protection). For recurring monthly clients, I also accept Venmo. All transactions are secure and documented."
+           data-ar="أقبل PayPal وZelle والتحويل البنكي والدفع عبر Fiverr (الذي يوفر حماية للمشتري). للعملاء الشهريين المتكررين، أقبل أيضاً Venmo. جميع المعاملات آمنة وموثقة.">
+        I accept PayPal, Zelle, bank transfer, and payments through Fiverr (which offers buyer protection). For recurring monthly clients, I also accept Venmo. All transactions are secure and documented.
+      </div>
+    </details>
+
+  </div>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const summary = item.querySelector('summary');
+      const icon = summary.querySelector('.faq-icon');
+      item.addEventListener('toggle', () => {
+        icon.textContent = item.open ? '－' : '＋';
+        summary.style.background = item.open ? 'rgba(212,175,55,0.12)' : 'rgba(212,175,55,0.05)';
+      });
+    });
+  </script>
+
+  <div style="text-align:center;margin-top:48px">
+    <a href="#cta" class="btn-gold" data-en="✦ Still have questions? Let's talk" data-ar="✦ لا تزال لديك أسئلة؟ لنتحدث">✦ Still have questions? Let's talk</a>
+  </div>
+</section>
+
+<section id="contact" class="section section-dark">
+  <div class="eyebrow reveal"><div class="eline"></div><div class="etxt" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</div></div>
+  <h2 class="sec-title reveal"><span data-en="Contact " data-ar="نموذج ">Contact </span><span class="gold" data-en="Form" data-ar="التواصل">Form</span></h2>
+  <div class="contact-wrap reveal">
+    <div>
+      <div class="contact-info-t" data-en="Let's Work Together" data-ar="لنعمل معاً">Let's Work Together</div>
+      <p class="contact-info-s" data-en="Have a question or project? Send a message and I'll reply within 24 hours." data-ar="هل لديك سؤال أو مشروع؟ أرسل رسالة وسأردّ عليك خلال 24 ساعة.">Have a question or project? Send a message and I'll reply within 24 hours.</p>
+      <div class="cd-item"><div class="cd-ic">📱</div><div><span class="cd-lbl" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span><div class="cd-val" dir="ltr" style="unicode-bidi:embed" dir="ltr" style="unicode-bidi:embed">+1 (916) 420-5814</div></div></div>
+      <div style="display:flex;gap:12px;margin:18px 0 6px;flex-wrap:wrap;">
+        <a href="https://wa.me/19164205814" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:600;font-size:13px;padding:11px 20px;border-radius:8px;text-decoration:none;letter-spacing:.5px;transition:opacity .2s;"
+           onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.127 1.534 5.86L.057 23.862a.5.5 0 0 0 .61.61l6.002-1.477A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.523-5.223-1.432l-.374-.223-3.882.955.974-3.772-.244-.389A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span data-en="Chat on WhatsApp" data-ar="تواصل عبر واتساب">Chat on WhatsApp</span>
+        </a>
+        <a href="sms:+19164205814" 
+           style="display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,0.12);color:var(--gold);border:1px solid rgba(212,175,55,0.35);font-weight:600;font-size:13px;padding:11px 20px;border-radius:8px;text-decoration:none;letter-spacing:.5px;transition:opacity .2s;"
+           onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          <span data-en="Send SMS" data-ar="رسالة نصية">Send SMS</span>
+        </a>
+      </div>
+      <div class="cd-item"><div class="cd-ic">✉️</div><div><span class="cd-lbl" data-en="Email" data-ar="البريد الإلكتروني">Email</span><div class="cd-val">sanose.marketing@gmail.com</div></div></div>
+      <div class="cd-item"><div class="cd-ic">🌐</div><div><span class="cd-lbl" data-en="Fiverr" data-ar="فايفر">Fiverr</span><div class="cd-val">fiverr.com/sanoserabih</div></div></div>
+      <div class="cd-item"><div class="cd-ic">📍</div><div><span class="cd-lbl" data-en="Location" data-ar="الموقع">Location</span><div class="cd-val" data-en="Sacramento, California — USA" data-ar="سكرامنتو، كاليفورنيا — الولايات المتحدة">Sacramento, California — USA</div></div></div>
+    </div>
+    <div>
+      <form action="https://formspree.io/f/mykopeve" method="POST" id="contactForm" name="contact" onsubmit="submitForm(event)">
+        <div class="form-g">
+          <label class="form-lbl" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+          <input class="form-inp" type="text" name="name" required placeholder="Your full name" data-phen="Your full name" data-phar="اسمك الكامل">
+        </div>
+        <div class="form-g">
+          <label class="form-lbl" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+          <input class="form-inp" type="email" name="email" required placeholder="your@email.com" data-phen="your@email.com" data-phar="بريدك@الإلكتروني.com">
+        </div>
+        <div class="form-g">
+          <label class="form-lbl" data-en="Business Name" data-ar="اسم الشركة">Business Name</label>
+          <input class="form-inp" type="text" name="business" placeholder="Your business" data-phen="Your business" data-phar="اسم شركتك أو نشاطك التجاري">
+        </div>
+        <div class="form-g">
+          <label class="form-lbl" data-en="Message" data-ar="الرسالة">Message</label>
+          <textarea class="form-ta" name="message" required placeholder="Tell me about your project..." data-phen="Tell me about your project..." data-phar="أخبرني عن مشروعك..."></textarea>
+        </div>
+        <div class="form-g">
+          <div class="cf-turnstile" data-sitekey="ضع_SITE_KEY_هنا"></div>
+        </div>
+        <button type="submit" class="form-btn" id="formBtn" data-en="Send Message →" data-ar="إرسال الرسالة →">Send Message →</button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <div class="eyebrow eyebrow-center reveal"><div class="eline"></div><div class="etxt" data-en="Start Today" data-ar="ابدأ اليوم">Start Today</div><div class="eline"></div></div>
+    <h2 class="cta-title reveal">
+      <span data-en="Ready to " data-ar="هل أنت مستعدّ ">Ready to </span>
+      <span class="gold" data-en="Grow" data-ar="لتنمية">Grow</span>
+      <span data-en=" Your Business?" data-ar=" أعمالك؟"> Your Business?</span>
+    </h2>
+    <p class="cta-sub reveal" data-en="Get your FREE custom content sample today. No commitment. No credit card. Just results." data-ar="احصل على عيّنة محتوى مجانية مخصَّصة لك اليوم. بدون التزام. بدون بطاقة ائتمان. فقط نتائج.">Get your FREE custom content sample today. No commitment. No credit card. Just results.</p>
+    <div class="cta-btns reveal">
+      <a href="#" href="https://wa.me/19164205814?text=Hello%20Sanose%2C%20I%27m%20interested%20in%20your%20AI%20marketing%20services." class="btn-gold" data-en="📱 WhatsApp Me Now" data-ar="📱 راسلني على واتساب">📱 WhatsApp Me Now</a>
+      <a href="#" onclick="openModal();return false;" class="btn-outline" data-en="View on Fiverr →" data-ar="← عرض على فايفر">View on Fiverr →</a>
+    </div>
+    <div class="cta-contacts reveal">
+      <div class="cta-c"><span>📞</span><span>+1 <strong>(916) 420-5814</strong></span></div>
+      <div class="cta-c"><span>✉️</span><span><strong>sanose.marketing@gmail.com</strong></span></div>
+      <div class="cta-c"><span>🌐</span><span><strong>fiverr.com/sanoserabih</strong></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="sr-footer">
+  <div class="sr-footer__inner">
+
+    <div class="sr-brand">
+      <div class="sr-mark">
+        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="64" height="72" overflow="visible">
+          <defs>
+            <linearGradient id="fgl" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#E8CB6A"/>
+              <stop offset="100%" stop-color="#9A7028"/>
+            </linearGradient>
+          </defs>
+          <polygon points="100,18 172,59 172,161 100,202 28,161 28,59" fill="#0F0F0E"/>
+          <polygon points="100,18 172,59 172,161 100,202 28,161 28,59" fill="none" stroke="#C9A84C" stroke-width="3"/>
+          <circle cx="100" cy="18"  r="5" fill="#C9A84C"/>
+          <circle cx="172" cy="59"  r="5" fill="#C9A84C"/>
+          <circle cx="172" cy="161" r="5" fill="#C9A84C"/>
+          <circle cx="100" cy="202" r="5" fill="#C9A84C"/>
+          <circle cx="28"  cy="161" r="5" fill="#C9A84C"/>
+          <circle cx="28"  cy="59"  r="5" fill="#C9A84C"/>
+          <text x="100" y="111" text-anchor="middle" dominant-baseline="central"
+                font-family="'Cinzel',Georgia,serif" font-weight="700" font-size="54" fill="url(#fgl)">SR</text>
+        </svg>
+      </div>
+      <div class="sr-name">Sanose <b>Rabih</b></div>
+      <div class="sr-tag" data-en="AI Marketing Specialist" data-ar="متخصِّص التسويق بالذكاء الاصطناعي">AI Marketing Specialist</div>
+    </div>
+
+    <nav class="sr-social" aria-label="Social media">
+      <a class="sr-wa" href="https://wa.me/19164205814" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.044zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+      </a>
+      <a class="sr-ig" href="https://www.instagram.com/srabihai" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a class="sr-fb" href="https://www.facebook.com/srabihai" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </nav>
+
+    <nav class="sr-links" aria-label="Footer navigation">
+      <a href="#services" data-en="Services"  data-ar="الخدمات">Services</a>
+      <a href="#about"    data-en="About"     data-ar="من أنا">About</a>
+      <a href="#pricing"  data-en="Pricing"   data-ar="الأسعار">Pricing</a>
+      <a href="#faq"      data-en="FAQ"       data-ar="أسئلة">FAQ</a>
+      <a href="#contact"  data-en="Contact"   data-ar="تواصل">Contact</a>
+      <a href="/blog/" data-en="Blog" data-ar="المدونة">Blog</a>
+    </nav>
+
+    <div class="sr-divider"></div>
+
+    <p class="sr-copy">
+      <span data-en="© 2026 Sanose Rabih · Sacramento, California — USA"
+            data-ar="© 2026 سنوسي رابح · سكرامنتو، كاليفورنيا">
+        © 2026 Sanose Rabih · Sacramento, California — USA
+      </span><br>
+      <a href="https://sanoserabih.com">sanoserabih.com</a>
+    </p>
+
+  </div>
 </footer>
 
+<!-- ═══ CONTACT MODAL ═══ -->
+<div id="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-ic">📱</div>
+    <div class="modal-t" id="modal-t">Contact Me</div>
+    <p class="modal-s" id="modal-s">Copy any detail to reach me directly:</p>
+    <div class="modal-row"><span class="modal-lbl">WhatsApp</span><div class="modal-val"><a href="https://wa.me/19164205814" style="color:var(--gold)" dir="ltr" style="unicode-bidi:embed">+1 (916) 420-5814</a></div></div>
+    <div class="modal-row"><span class="modal-lbl">Email</span><div class="modal-val">sanose.marketing@gmail.com</div></div>
+    <div class="modal-row"><span class="modal-lbl">Fiverr</span><div class="modal-val">fiverr.com/sanoserabih</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+   JAVASCRIPT
+═══════════════════════════════════════ -->
 <script>
-// ── Language toggle ──
-let currentLang = 'en';
-function setLang(lang, btn) {
+'use strict';
+
+/* ── Nav scroll ── */
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+/* ── Hamburger ── */
+var ham = document.getElementById('ham');
+var mob = document.getElementById('mob-menu');
+function toggleMenu(){
+  var open = mob.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMenu(){
+  mob.classList.remove('open');
+  ham.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); closeModal(); } });
+
+/* ── Scroll reveal ── */
+var revObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  });
+}, {threshold:0.08, rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){ revObs.observe(el); });
+
+/* ── Modal ── */
+var modal = document.getElementById('modal');
+function openModal(){
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modal-t').textContent = currentLang==='ar' ? 'تواصل معي' : 'Contact Me';
+  document.getElementById('modal-s').textContent = currentLang==='ar'
+    ? 'انسخ أيّ معلومة للتواصل المباشر:'
+    : 'Copy any detail to reach me directly:';
+}
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+
+/* ── Language ── */
+var currentLang = 'en';
+function setLang(lang){
   currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  // Cards
-  document.querySelectorAll('.en-title').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-  document.querySelectorAll('.ar-title').forEach(el => el.style.display = lang === 'ar' ? 'block' : 'none');
-  // Featured
-  const featTitle = document.getElementById('feat-title');
-  const featDesc = document.getElementById('feat-desc');
-  if (lang === 'ar') {
-    document.documentElement.setAttribute('dir','rtl');
-    featTitle.textContent = 'لماذا يحتاج كل مشروع صغير إلى التسويق الرقمي في 2026؟';
-    featTitle.style.fontFamily = "'Cairo', sans-serif";
-    featDesc.textContent = 'الإنترنت هو المكان الذي يعيش فيه عملاؤك، يبحثون ويقارنون ويشترون. في 2026، السؤال ليس هل يجب أن تكون أونلاين، بل كيف تظهر بالشكل الصحيح حين يحتاجك عميلك.';
-    featDesc.style.direction = 'rtl';
-  } else {
-    document.documentElement.setAttribute('dir','ltr');
-    featTitle.textContent = 'Why Every Small Business Needs Digital Marketing in 2026';
-    featTitle.style.fontFamily = "'Playfair Display', serif";
-    featDesc.textContent = 'The internet is where your customers live, research, compare, and buy. In 2026, the question is not whether your small business should be online — but how well you show up when it matters.';
-    featDesc.style.direction = 'ltr';
+  var html = document.documentElement;
+  html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang==='ar' ? 'rtl' : 'ltr');
+
+  /* Button states */
+  ['lbEN','lbAR','mlEN','mlAR'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){
+      var isEN = id==='lbEN' || id==='mlEN';
+      el.classList.toggle('on', (lang==='en') === isEN);
+    }
+  });
+
+  /* Translate all elements */
+  document.querySelectorAll('[data-en],[data-ar]').forEach(function(el){
+    var txt = el.getAttribute('data-'+lang);
+    if(!txt) return;
+    if(txt.indexOf('<')>-1 || txt.indexOf('&')>-1){ el.innerHTML = txt; }
+    else { el.textContent = txt; }
+  });
+
+  /* Placeholders */
+  document.querySelectorAll('[data-phen],[data-phar]').forEach(function(el){
+    var ph = el.getAttribute('data-ph'+lang);
+    if(ph) el.setAttribute('placeholder', ph);
+  });
+
+  /* Form button */
+  var fb = document.getElementById('formBtn');
+  if(fb && !fb.disabled){
+    fb.textContent = lang==='ar' ? 'إرسال الرسالة →' : 'Send Message →';
   }
+
+  /* Page title */
+  document.title = lang==='ar'
+    ? 'سنوسي رابح | متخصِّص التسويق الرقمي'
+    : 'Sanose Rabih | AI Marketing Specialist';
 }
 
-// ── Pillar filter ──
-let currentPillar = 'all';
-function filterPillar(pillar, el) {
-  currentPillar = pillar;
-  // Reset all pills
-  document.querySelectorAll('.pillar-pill').forEach(p => {
-    p.className = p.className.replace(/all-active|active-dm|active-ai|active-sm|active-gr/g,'').trim();
-  });
-  // Set active
-  if (pillar === 'all') el.classList.add('all-active');
-  else el.classList.add('active-' + pillar);
+/* ── Contact Form ── */
+function submitForm(e){
+  e.preventDefault();
+  var form = e.target;
+  var btn  = document.getElementById('formBtn');
+  var msg  = document.getElementById('formMsg');
 
-  const cards = document.querySelectorAll('#grid .card');
-  let visible = 0;
-  cards.forEach(c => {
-    const show = pillar === 'all' || c.dataset.pillar === pillar;
-    c.classList.toggle('hidden', !show);
-    if (show) visible++;
+  btn.textContent = currentLang==='ar' ? '... جاري الإرسال' : 'Sending...';
+  btn.disabled = true;
+  msg.style.display = 'none';
+
+  var formData = new FormData(form);
+
+  fetch('https://formspree.io/f/mykopeve', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: formData
+  })
+  .then(function(res){
+    if(res.ok){
+      msg.style.display     = 'block';
+      msg.style.background  = 'rgba(50,160,80,.12)';
+      msg.style.border      = '1px solid rgba(50,160,80,.35)';
+      msg.style.color       = '#6fda8a';
+      msg.textContent = currentLang==='ar'
+        ? '✓ تمّ الإرسال! سأردّ عليك خلال 24 ساعة.'
+        : '✓ Message sent! I\'ll reply within 24 hours.';
+      form.reset();
+    } else { throw new Error('server'); }
+  })
+  .catch(function(){
+    msg.style.display     = 'block';
+    msg.style.background  = 'rgba(220,60,60,.10)';
+    msg.style.border      = '1px solid rgba(220,60,60,.30)';
+    msg.style.color       = '#f08080';
+    msg.textContent = currentLang==='ar'
+      ? '⚠ خطأ — راسلني على واتساب: ‎+1 (916) 420-5814'
+      : '⚠ Error — WhatsApp me: +1 (916) 420-5814';
+  })
+  .finally(function(){
+    btn.textContent = currentLang==='ar' ? 'إرسال الرسالة →' : 'Send Message →';
+    btn.disabled = false;
+    setTimeout(function(){ msg.style.display='none'; }, 7000);
+    if (window.turnstile) { turnstile.reset(); }
   });
-  document.getElementById('countLabel').innerHTML = '<strong>' + visible + '</strong> scheduled';
 }
+
+/* ── Portfolio Filter ── */
+function filterPort(cat, btn){
+  document.querySelectorAll('.pf-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.plib-card').forEach(function(card){
+    if(cat === 'all'){
+      card.classList.remove('hidden');
+    } else {
+      var cats = card.getAttribute('data-cat') || '';
+      card.classList.toggle('hidden', cats.indexOf(cat) === -1);
+    }
+  });
+}
+
 </script>
+
+<!-- Floating Buttons -->
+<a href="sms:+19164205814" aria-label="SMS"
+   style="position:fixed;bottom:90px;right:24px;z-index:9999;width:48px;height:48px;border-radius:50%;background:#1a1a1a;border:2px solid rgba(212,175,55,0.5);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.5);transition:transform .2s,box-shadow .2s;"
+   onmouseover="this.style.transform='scale(1.1)';this.style.borderColor='rgba(212,175,55,0.9)'"
+   onmouseout="this.style.transform='scale(1)';this.style.borderColor='rgba(212,175,55,0.5)'">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="#D4AF37"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+</a>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/19164205814" target="_blank" rel="noopener" aria-label="WhatsApp"
+   style="position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;"
+   onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,.6)'"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,.45)'">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.127 1.534 5.86L.057 23.862a.5.5 0 0 0 .61.61l6.002-1.477A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.523-5.223-1.432l-.374-.223-3.882.955.974-3.772-.244-.389A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
 </body>
 </html>
