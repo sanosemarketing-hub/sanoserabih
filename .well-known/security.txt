@@ -1,0 +1,4 @@
+Contact: mailto:sanose.marketing@gmail.com
+Expires: 2027-06-15T23:59:59.000Z
+Preferred-Languages: en, ar
+Canonical: https://sanoserabih.com/.well-known/security.txt
