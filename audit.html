@@ -148,6 +148,9 @@
     .wa-float span{display:none}.wa-float{padding:14px;border-radius:50%}
   }
 </style>
+
+<!-- Cloudflare Turnstile (spam protection for the form) -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <div class="bg-atmos"></div>
@@ -312,6 +315,9 @@
             <div class="fg"><label data-en="City *" data-ar="المدينة *">City *</label><input name="city" required data-en-ph="Sacramento" data-ar-ph="ساكرامنتو" placeholder="Sacramento"></div>
           </div>
           <div class="fg"><label data-en="Your biggest marketing problem right now *" data-ar="أكبر مشكلة تسويقية تواجهك الآن *">Your biggest marketing problem right now *</label><textarea name="problem" required data-en-ph="e.g. Not enough new customers, low online visibility, no time to post…" data-ar-ph="مثال: عملاء جدد قلائل، ظهور ضعيف على الإنترنت، لا وقت للنشر…" placeholder="e.g. Not enough new customers, low online visibility…"></textarea></div>
+          <div class="fg">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADla3CZFDnKFpghG"></div>
+          </div>
           <button class="submit" type="submit" data-en="Send My Free Audit Request →" data-ar="أرسل طلب التحليل المجاني ←">Send My Free Audit Request →</button>
           <p class="form-note" data-en="Your information is private and never shared." data-ar="معلوماتك خاصة ولن تُشارَك أبدًا.">Your information is private and never shared.</p>
         </form>
@@ -426,6 +432,7 @@ document.getElementById('audit-form').addEventListener('submit', function(ev) {
 function showError(btn, msg) {
   btn.disabled = false;
   btn.textContent = isAr() ? 'أرسل طلب التحليل المجاني ←' : 'Send My Free Audit Request →';
+  if (window.turnstile) { turnstile.reset(); }
   var err = document.getElementById('form-error');
   if (!err) {
     err = document.createElement('p');
